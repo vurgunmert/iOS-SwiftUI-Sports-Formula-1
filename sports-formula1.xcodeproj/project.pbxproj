@@ -12,6 +12,7 @@
 		CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */; };
 		CEB9ED922A935116008FAC22 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED912A935116008FAC22 /* Modifiers.swift */; };
 		CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED932A93768D008FAC22 /* LastRaceView.swift */; };
+		CEB9ED962A937956008FAC22 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED952A937956008FAC22 /* TeamView.swift */; };
 		CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBF6342A90E02B00B93271 /* sports_formula1App.swift */; };
 		CECBF6372A90E02B00B93271 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBF6362A90E02B00B93271 /* ContentView.swift */; };
 		CECBF6392A90E02D00B93271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF6382A90E02D00B93271 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
 		CEB9ED912A935116008FAC22 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		CEB9ED932A93768D008FAC22 /* LastRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRaceView.swift; sourceTree = "<group>"; };
+		CEB9ED952A937956008FAC22 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECBF6342A90E02B00B93271 /* sports_formula1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sports_formula1App.swift; sourceTree = "<group>"; };
 		CECBF6362A90E02B00B93271 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */,
 				CEB9ED932A93768D008FAC22 /* LastRaceView.swift */,
+				CEB9ED952A937956008FAC22 /* TeamView.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				CECBF6372A90E02B00B93271 /* ContentView.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */,
+				CEB9ED962A937956008FAC22 /* TeamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
