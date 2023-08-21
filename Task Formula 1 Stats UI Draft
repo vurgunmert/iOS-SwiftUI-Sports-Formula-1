@@ -1,0 +1,125 @@
+Task: Formula 1 Stats UI Draft
+Project: Sport - Formula 1 Stats
+
+Main Screens: #Home - #Races - #Drivers
+
+Optional Screens: #Teams - #Circuits - #Event Results
+
+--------------------------------------------------------
+
+#Home 
+
+[] Next Race
+	[] Countdown Days, Hours, Minutes
+	[] Circuit Name
+	[] 1st, 2nd, 3rd Drivers Win Probability
+
+[] Last Race
+	[] DateTime
+	[] Name - Country
+	[] 1st, 2nd, 3rd Drivers
+	[] Fastest Lap Driver
+
+[] Team Ranks
+	[] 1st Team - Points
+	[] 2nd Team - Points
+	[] 3rd Team - Points
+
+
+--------------------------------------------------------
+
+#Races
+
+[] Season Preselected to 2023
+
+[] Next Race
+	[] DateTime
+	[] Name - Country
+	[] Lap Count
+	[] Circuit Image
+	[] 1st, 2nd, 3rd Drivers Win Probability
+
+[] Previous Race
+	[] DateTime
+	[] Name - Country
+	[] 1st, 2nd, 3rd Drivers
+	[] Fastest Lap Driver
+
+....
+
+--------------------------------------------------------
+
+#Drivers
+
+[] Rank [] Season Points 
+	[] Driver Card
+		[] Name				[] Image 
+		[] Country Flag
+		[] Driver No
+		[] Team Name
+		[Optional] Career Points
+....
+
+--------------------------------------------------------
+
+#Teams
+
+[] Rank [] Points
+	[] Team Card
+		[] Name				[] Image 
+		[] President
+		[] Director
+		[] Engine - Chassis
+		[] $count World Champion
+		[] $count Pole Start
+		[] $count Fastest Lap
+
+....
+
+--------------------------------------------------------
+
+#Circuits
+
+[] Name
+[] Image
+[] Location
+[] Lap Count
+[] Lenght KM
+[] Lap Record Card
+	[] Time
+	[] Driver
+	[] Year
+
+
+....
+
+--------------------------------------------------------
+
+#Event Results
+
+[] Name; ... Grand Prix
+	[] Practice 1
+		1.[] Lap Time[] Driver Card
+						[] Name [] Team
+
+		2.[] Lap Time[] Driver Card
+						[] Name [] Team
+	[] Practice 2
+		[] Lap Time[] Driver Card
+						[] Name [] Team
+	[] Practice 3
+		[] Lap Time[] Driver Card
+						[] Name [] Team
+	[] Qualifications
+		[] Lap Time[] Driver Card
+						[] Name [] Team
+	[] Race
+
+		1.[] Lap Time[] Driver Card
+						[] Name [] Team
+
+		2.[] Lap Time[] Driver Card
+						[] Name [] Team
+
+		3.[] Lap Time[] Driver Card
+						[] Name [] Team

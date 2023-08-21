@@ -1,0 +1,34 @@
+Task: Formula 1 Stats API Overview
+Project: Sport - Formula 1 Stats
+
+
+Add sports.io API Service (https://api-sports.io/documentation/formula-1/v1)
+
+/races
+	id
+	next
+	last
+	season
+	type
+
+Available Status
+
+Live
+Completed
+Cancelled
+Postponed
+Scheduled
+Available Types
+
+Race
+Sprint
+1st Practice
+2nd Practice
+3rd Practice
+1st Qualifying
+2nd Qualifying
+3rd Qualifying
+
+
+
+Response | GET : https://v1.formula-1.api-sports.io/rankings/races?race=6
