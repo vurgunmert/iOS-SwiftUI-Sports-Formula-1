@@ -17,6 +17,11 @@
 		CE8B0F2A2A960AB100DF8AC0 /* TeamMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F292A960AB100DF8AC0 /* TeamMiniView.swift */; };
 		CE8B0F2D2A960B9E00DF8AC0 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F2C2A960B9E00DF8AC0 /* CircuitModel.swift */; };
 		CE8B0F2F2A960CDC00DF8AC0 /* CircuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F2E2A960CDC00DF8AC0 /* CircuitView.swift */; };
+		CE8B0F322A96146500DF8AC0 /* RaceSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F312A96146500DF8AC0 /* RaceSummaryView.swift */; };
+		CE8B0F342A96160200DF8AC0 /* RaceSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F332A96160200DF8AC0 /* RaceSummaryModel.swift */; };
+		CE8B0F362A961D9A00DF8AC0 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F352A961D9A00DF8AC0 /* DateUtils.swift */; };
+		CE8B0F382A96336900DF8AC0 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F372A96336900DF8AC0 /* ViewUtils.swift */; };
+		CE8B0F3A2A96338800DF8AC0 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F392A96338800DF8AC0 /* ColorUtils.swift */; };
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
 		CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */; };
 		CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED932A93768D008FAC22 /* LastRaceView.swift */; };
@@ -38,6 +43,11 @@
 		CE8B0F292A960AB100DF8AC0 /* TeamMiniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMiniView.swift; sourceTree = "<group>"; };
 		CE8B0F2C2A960B9E00DF8AC0 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
 		CE8B0F2E2A960CDC00DF8AC0 /* CircuitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitView.swift; sourceTree = "<group>"; };
+		CE8B0F312A96146500DF8AC0 /* RaceSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryView.swift; sourceTree = "<group>"; };
+		CE8B0F332A96160200DF8AC0 /* RaceSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryModel.swift; sourceTree = "<group>"; };
+		CE8B0F352A961D9A00DF8AC0 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		CE8B0F372A96336900DF8AC0 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		CE8B0F392A96338800DF8AC0 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
 		CEB9ED932A93768D008FAC22 /* LastRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRaceView.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				CE8B0F202A95FF1D00DF8AC0 /* TextUtils.swift */,
+				CE8B0F352A961D9A00DF8AC0 /* DateUtils.swift */,
+				CE8B0F372A96336900DF8AC0 /* ViewUtils.swift */,
+				CE8B0F392A96338800DF8AC0 /* ColorUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -113,6 +126,15 @@
 				CE8B0F2E2A960CDC00DF8AC0 /* CircuitView.swift */,
 			);
 			path = circuit;
+			sourceTree = "<group>";
+		};
+		CE8B0F302A96128200DF8AC0 /* race */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F312A96146500DF8AC0 /* RaceSummaryView.swift */,
+				CE8B0F332A96160200DF8AC0 /* RaceSummaryModel.swift */,
+			);
+			path = race;
 			sourceTree = "<group>";
 		};
 		CEB9ED902A935103008FAC22 /* modifier */ = {
@@ -163,6 +185,7 @@
 		CECBF6422A922CAC00B93271 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				CE8B0F302A96128200DF8AC0 /* race */,
 				CE8B0F2B2A960B9200DF8AC0 /* circuit */,
 				CE8B0F242A9608C700DF8AC0 /* team */,
 				CE8B0F1C2A95FE5B00DF8AC0 /* driver */,
@@ -306,15 +329,20 @@
 				CE8B0F1B2A95FD0400DF8AC0 /* DriverView.swift in Sources */,
 				CE8B0F1E2A95FE7000DF8AC0 /* DriverModel.swift in Sources */,
 				CE8B0F232A9605E400DF8AC0 /* DriverMiniView.swift in Sources */,
+				CE8B0F322A96146500DF8AC0 /* RaceSummaryView.swift in Sources */,
+				CE8B0F342A96160200DF8AC0 /* RaceSummaryModel.swift in Sources */,
 				CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */,
 				CE8B0F2D2A960B9E00DF8AC0 /* CircuitModel.swift in Sources */,
 				CE8B0F2F2A960CDC00DF8AC0 /* CircuitView.swift in Sources */,
+				CE8B0F3A2A96338800DF8AC0 /* ColorUtils.swift in Sources */,
+				CE8B0F362A961D9A00DF8AC0 /* DateUtils.swift in Sources */,
 				CECBF6372A90E02B00B93271 /* ContentView.swift in Sources */,
 				CE8B0F282A96090600DF8AC0 /* TeamModel.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */,
 				CE8B0F2A2A960AB100DF8AC0 /* TeamMiniView.swift in Sources */,
 				CE8B0F262A9608F400DF8AC0 /* TeamView.swift in Sources */,
+				CE8B0F382A96336900DF8AC0 /* ViewUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
