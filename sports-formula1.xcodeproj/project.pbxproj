@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		287F542BC1F5F6F3C9D5E1E9 /* Pods_sports_formula1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1248835CAE6D4B06B83767 /* Pods_sports_formula1.framework */; };
+		CE8B0F1B2A95FD0400DF8AC0 /* DriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F1A2A95FD0400DF8AC0 /* DriverView.swift */; };
+		CE8B0F1E2A95FE7000DF8AC0 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F1D2A95FE7000DF8AC0 /* DriverModel.swift */; };
+		CE8B0F212A95FF1D00DF8AC0 /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F202A95FF1D00DF8AC0 /* TextUtils.swift */; };
+		CE8B0F232A9605E400DF8AC0 /* DriverMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F222A9605E400DF8AC0 /* DriverMiniView.swift */; };
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
 		CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */; };
-		CEB9ED922A935116008FAC22 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED912A935116008FAC22 /* Modifiers.swift */; };
 		CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED932A93768D008FAC22 /* LastRaceView.swift */; };
 		CEB9ED962A937956008FAC22 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED952A937956008FAC22 /* TeamView.swift */; };
 		CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBF6342A90E02B00B93271 /* sports_formula1App.swift */; };
@@ -22,8 +25,11 @@
 /* Begin PBXFileReference section */
 		1499B8C0E1F600BD1EDF571D /* Pods-sports-formula1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sports-formula1.debug.xcconfig"; path = "Target Support Files/Pods-sports-formula1/Pods-sports-formula1.debug.xcconfig"; sourceTree = "<group>"; };
 		8F1248835CAE6D4B06B83767 /* Pods_sports_formula1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sports_formula1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8B0F1A2A95FD0400DF8AC0 /* DriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverView.swift; sourceTree = "<group>"; };
+		CE8B0F1D2A95FE7000DF8AC0 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
+		CE8B0F202A95FF1D00DF8AC0 /* TextUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
+		CE8B0F222A9605E400DF8AC0 /* DriverMiniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverMiniView.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
-		CEB9ED912A935116008FAC22 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		CEB9ED932A93768D008FAC22 /* LastRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRaceView.swift; sourceTree = "<group>"; };
 		CEB9ED952A937956008FAC22 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,10 +70,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE8B0F1C2A95FE5B00DF8AC0 /* driver */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F1A2A95FD0400DF8AC0 /* DriverView.swift */,
+				CE8B0F1D2A95FE7000DF8AC0 /* DriverModel.swift */,
+				CE8B0F222A9605E400DF8AC0 /* DriverMiniView.swift */,
+			);
+			path = driver;
+			sourceTree = "<group>";
+		};
+		CE8B0F1F2A95FF0E00DF8AC0 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F202A95FF1D00DF8AC0 /* TextUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		CEB9ED902A935103008FAC22 /* modifier */ = {
 			isa = PBXGroup;
 			children = (
-				CEB9ED912A935116008FAC22 /* Modifiers.swift */,
 			);
 			path = modifier;
 			sourceTree = "<group>";
@@ -113,6 +136,7 @@
 		CECBF6422A922CAC00B93271 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				CE8B0F1C2A95FE5B00DF8AC0 /* driver */,
 				CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */,
 				CEB9ED932A93768D008FAC22 /* LastRaceView.swift */,
 				CEB9ED952A937956008FAC22 /* TeamView.swift */,
@@ -123,6 +147,7 @@
 		CECBF6432A922CB800B93271 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CE8B0F1F2A95FF0E00DF8AC0 /* utils */,
 				CEB9ED902A935103008FAC22 /* modifier */,
 				CECBF6422A922CAC00B93271 /* component */,
 			);
@@ -249,7 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB9ED922A935116008FAC22 /* Modifiers.swift in Sources */,
+				CE8B0F212A95FF1D00DF8AC0 /* TextUtils.swift in Sources */,
+				CE8B0F1B2A95FD0400DF8AC0 /* DriverView.swift in Sources */,
+				CE8B0F1E2A95FE7000DF8AC0 /* DriverModel.swift in Sources */,
+				CE8B0F232A9605E400DF8AC0 /* DriverMiniView.swift in Sources */,
 				CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */,
 				CECBF6372A90E02B00B93271 /* ContentView.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
