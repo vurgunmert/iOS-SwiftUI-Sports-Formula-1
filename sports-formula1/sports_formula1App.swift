@@ -11,7 +11,7 @@ import SwiftUI
 struct sports_formula1App: App {
     var body: some Scene {
         WindowGroup {
-            
+            LandingScreenView()
         }
     }
 }
