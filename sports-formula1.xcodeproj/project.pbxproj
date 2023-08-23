@@ -28,6 +28,7 @@
 		CE8B0F482A96395F00DF8AC0 /* DriversScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F472A96395F00DF8AC0 /* DriversScreenView.swift */; };
 		CE8B0F4A2A96397100DF8AC0 /* TeamsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F492A96397100DF8AC0 /* TeamsScreenView.swift */; };
 		CE8B0F4C2A96397F00DF8AC0 /* CircuitsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F4B2A96397F00DF8AC0 /* CircuitsScreenView.swift */; };
+		CE8B0F532A963B7B00DF8AC0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B0F522A963B7B00DF8AC0 /* HomeViewModel.swift */; };
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
 		CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */; };
 		CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED932A93768D008FAC22 /* LastRaceView.swift */; };
@@ -59,6 +60,7 @@
 		CE8B0F472A96395F00DF8AC0 /* DriversScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversScreenView.swift; sourceTree = "<group>"; };
 		CE8B0F492A96397100DF8AC0 /* TeamsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsScreenView.swift; sourceTree = "<group>"; };
 		CE8B0F4B2A96397F00DF8AC0 /* CircuitsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsScreenView.swift; sourceTree = "<group>"; };
+		CE8B0F522A963B7B00DF8AC0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
 		CEB9ED932A93768D008FAC22 /* LastRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRaceView.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,14 +152,55 @@
 		CE8B0F402A96375E00DF8AC0 /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				CE8B0F512A963B6000DF8AC0 /* circuits */,
+				CE8B0F502A963B5C00DF8AC0 /* teams */,
+				CE8B0F4F2A963B5800DF8AC0 /* drivers */,
+				CE8B0F4E2A963B5200DF8AC0 /* races */,
+				CE8B0F4D2A963B4A00DF8AC0 /* home */,
 				CE8B0F412A96376D00DF8AC0 /* LandingScreenView.swift */,
-				CE8B0F432A9638C700DF8AC0 /* HomeScreenView.swift */,
-				CE8B0F452A96394800DF8AC0 /* RacesScreenView.swift */,
-				CE8B0F472A96395F00DF8AC0 /* DriversScreenView.swift */,
-				CE8B0F492A96397100DF8AC0 /* TeamsScreenView.swift */,
-				CE8B0F4B2A96397F00DF8AC0 /* CircuitsScreenView.swift */,
 			);
 			path = screen;
+			sourceTree = "<group>";
+		};
+		CE8B0F4D2A963B4A00DF8AC0 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F432A9638C700DF8AC0 /* HomeScreenView.swift */,
+				CE8B0F522A963B7B00DF8AC0 /* HomeViewModel.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		CE8B0F4E2A963B5200DF8AC0 /* races */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F452A96394800DF8AC0 /* RacesScreenView.swift */,
+			);
+			path = races;
+			sourceTree = "<group>";
+		};
+		CE8B0F4F2A963B5800DF8AC0 /* drivers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F472A96395F00DF8AC0 /* DriversScreenView.swift */,
+			);
+			path = drivers;
+			sourceTree = "<group>";
+		};
+		CE8B0F502A963B5C00DF8AC0 /* teams */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F492A96397100DF8AC0 /* TeamsScreenView.swift */,
+			);
+			path = teams;
+			sourceTree = "<group>";
+		};
+		CE8B0F512A963B6000DF8AC0 /* circuits */ = {
+			isa = PBXGroup;
+			children = (
+				CE8B0F4B2A96397F00DF8AC0 /* CircuitsScreenView.swift */,
+			);
+			path = circuits;
 			sourceTree = "<group>";
 		};
 		CEB9ED902A935103008FAC22 /* modifier */ = {
@@ -367,6 +410,7 @@
 				CE8B0F282A96090600DF8AC0 /* TeamModel.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */,
+				CE8B0F532A963B7B00DF8AC0 /* HomeViewModel.swift in Sources */,
 				CE8B0F2A2A960AB100DF8AC0 /* TeamMiniView.swift in Sources */,
 				CE8B0F262A9608F400DF8AC0 /* TeamView.swift in Sources */,
 				CE8B0F382A96336900DF8AC0 /* ViewUtils.swift in Sources */,

@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct RaceSummaryModel {
+struct RaceSummaryModel: Identifiable {
+    let id = UUID()
+    
     let name: String
     let country: String
     let circuitName: String
-    let dateTime: String
+    let dateTime: Date?
     
     let drivers: [Driver]?
     

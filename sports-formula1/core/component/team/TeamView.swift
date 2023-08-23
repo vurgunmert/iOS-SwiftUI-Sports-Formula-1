@@ -16,7 +16,7 @@ struct TeamView: View {
         VStack {
             
             HStack {
-                Text(String(model.rank))
+                Text(String(model.position))
                     .bold()
                     .font(.system(size: 30, weight: .heavy))
                 Spacer()
@@ -27,22 +27,25 @@ struct TeamView: View {
                 .bold()
                 .font(.system(size: 28))
             
-            KFImage.url(URL(string: model.imageUrl))
-            
-            HStack {
-                
-                Text(model.driver1Name)
-                    .bold()
-                    .font(.system(size: 28))
-                
-                Spacer()
-                
-                Text(model.driver2Name)
-                    .bold()
-                    .font(.system(size: 28))
-                
+            if let imageUrl = model.imageUrl {
+                KFImage.url(URL(string: imageUrl))
             }
             
+            if let driver1Name = model.driver1Name, let driver2Name = model.driver2Name {
+                HStack {
+                    
+                    Text(driver1Name)
+                        .bold()
+                        .font(.system(size: 28))
+                    
+                    Spacer()
+                    
+                    Text(driver2Name)
+                        .bold()
+                        .font(.system(size: 28))
+                    
+                }
+            }
         }
         .frame(width: 300)
         .padding(10)
@@ -55,7 +58,7 @@ struct TeamView: View {
 
 struct TeamView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamView(model: TeamModel(rank: 1,
+        TeamView(model: TeamModel(position: 1,
                                   name: "Red Bull Racing",
                                   points: 503,
                                   imageUrl: "https://media.api-sports.io/formula-1/teams/1.png",

@@ -9,25 +9,22 @@ import SwiftUI
 
 struct TeamMiniView: View {
     
-    let rank: Int
-    let name: String
-    let data: String
+    let model: TeamModel
     
     var body: some View {
         HStack {
-            Text(String(rank))
+            Text(String(model.position))
                 .foregroundColor(.orange)
                 .bold()
                 .font(.system(size: 25, weight: .heavy))
-            Text(name)
-                .padding(.leading, 30)
-                .frame(width: .infinity)
+            Text(model.name)
+                .padding(.leading, 12)
                 .foregroundColor(.black)
                 .bold()
                 .font(.system(size: 20, weight: .heavy))
             Spacer()
-            Text(data )
-                .padding(.leading, 30)
+            Text(String(model.points) + "\n pts")
+                .padding(.leading, 12)
                 .foregroundColor(.black)
                 .bold()
                 .font(.system(size: 20, weight: .heavy))
@@ -38,6 +35,8 @@ struct TeamMiniView: View {
 
 struct TeamMiniView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMiniView(rank: 1, name: "Red Bull Racing", data: "313 pts")
+        TeamMiniView(model: TeamModel(position: 1,
+                                      name: "Red Bull Racing",
+                                      points: 503))
     }
 }
