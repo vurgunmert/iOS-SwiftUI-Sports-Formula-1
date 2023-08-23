@@ -10,7 +10,7 @@ import Kingfisher
 
 struct DriverView: View {
     
-    let driver: DriverModel
+    let model: DriverModel
     
     var body: some View {
         
@@ -18,13 +18,13 @@ struct DriverView: View {
         VStack() {
             
             HStack(alignment: .top) {
-                Text(String(driver.rank))
+                Text(String(model.rank))
                     .foregroundColor(.black)
                     .bold()
                     .font(.system(size: 40, weight: .heavy))
                 Spacer()
                 VStack{
-                    Text(String(driver.points))
+                    Text(String(model.points))
                         .foregroundColor(.black)
                         .bold()
                         .font(.system(size: 30, weight: .heavy))
@@ -37,22 +37,22 @@ struct DriverView: View {
             Divider()
             
             HStack {
-                Text(driver.name)
+                Text(model.name)
                 Spacer()
-                Text(flag(from: driver.countryCode))
+                Text(flag(from: model.countryCode))
             }
             
             Divider()
             
-            Text(driver.teamName)
+            Text(model.teamName)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             HStack(alignment: .bottom) {
-                Text(String(driver.driverNo))
+                Text(String(model.driverNo))
                     .foregroundColor(.red)
                     .bold()
                     .font(.system(size: 80, weight: .heavy))
-                KFImage.url(URL(string: driver.imageUrl))
+                KFImage.url(URL(string: model.imageUrl))
             }
             
         }
@@ -68,7 +68,7 @@ struct DriverView: View {
 struct DriverView_Previews: PreviewProvider {
     
     static var previews: some View {
-        DriverView(driver: DriverModel(rank: 1,
+        DriverView(model: DriverModel(rank: 1,
                                        points: 314,
                                        name: "Max Verstappen",
                                        countryCode: "NL",
