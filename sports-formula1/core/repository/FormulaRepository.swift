@@ -28,8 +28,6 @@ class FormulaRepository {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let data = data {
-                
-                print(String(data: data, encoding: .utf8)!)
 
                 do {
                     let rankingResponse = try JSONDecoder().decode(DriverRankingsResponse.self, from: data)
@@ -62,11 +60,41 @@ class FormulaRepository {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let data = data {
-                
+                do {
+                    let rankingResponse = try JSONDecoder().decode(TeamRankingsResponse.self, from: data)
+                    
+                    onResponse(rankingResponse.response)
+                    
+                } catch(let error) {
+                    print(error)
+                }
+            } else if let error = error {
+                print("HTTP Request Failed \(error)")
+            }
+            
+        }
+        
+        task.resume()
+    }
+    
+    
+    func getRaces(onResponse: @escaping ([RacesResponseItem]) -> Void) {
+        
+        let url = URL(string: "https://v1.formula-1.api-sports.io/races?season=2023&type=race")!
+        
+        var request = URLRequest(url: url)
+        
+        request.setValue("b049b3527733bfbf098106fc59b5523d", forHTTPHeaderField: "x-rapidapi-key")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+        
+            if let data = data {
                 print(String(data: data, encoding: .utf8)!)
                 
                 do {
-                    let rankingResponse = try JSONDecoder().decode(TeamRankingsResponse.self, from: data)
+                    let rankingResponse = try JSONDecoder().decode(RacesResponse.self, from: data)
                     
                     onResponse(rankingResponse.response)
                     

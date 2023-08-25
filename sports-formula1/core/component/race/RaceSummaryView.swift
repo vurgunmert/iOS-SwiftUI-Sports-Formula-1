@@ -49,7 +49,7 @@ struct RaceSummaryView: View {
                 }
 
                 
-                if let drivers = model.drivers {
+                if let drivers = model.drivers, !drivers.isEmpty {
                     Divider()
                     
                     HStack(alignment: .bottom) {

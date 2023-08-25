@@ -8,6 +8,8 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
+    
+    private let repository = FormulaRepository()
  
     @Published var raceSummaries: [RaceSummaryModel] = [
     
@@ -54,4 +56,7 @@ class HomeViewModel: ObservableObject {
                   points: 196)
     ]
     
+    init() {
+     
+    }
 }
