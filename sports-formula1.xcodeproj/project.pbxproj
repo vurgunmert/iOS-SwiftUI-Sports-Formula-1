@@ -40,6 +40,7 @@
 		CEC824052A98900F00B60966 /* DriverRankingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824042A98900F00B60966 /* DriverRankingsResponse.swift */; };
 		CEC824082A9896DB00B60966 /* TeamDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824072A9896DB00B60966 /* TeamDto.swift */; };
 		CEC8240B2A98978700B60966 /* DriverDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8240A2A98978700B60966 /* DriverDto.swift */; };
+		CEC8240D2A989BD300B60966 /* TeamRankingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8240C2A989BD300B60966 /* TeamRankingsResponse.swift */; };
 		CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBF6342A90E02B00B93271 /* sports_formula1App.swift */; };
 		CECBF6392A90E02D00B93271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF6382A90E02D00B93271 /* Assets.xcassets */; };
 		CECBF63C2A90E02D00B93271 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF63B2A90E02D00B93271 /* Preview Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		CEC824042A98900F00B60966 /* DriverRankingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingsResponse.swift; sourceTree = "<group>"; };
 		CEC824072A9896DB00B60966 /* TeamDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDto.swift; sourceTree = "<group>"; };
 		CEC8240A2A98978700B60966 /* DriverDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDto.swift; sourceTree = "<group>"; };
+		CEC8240C2A989BD300B60966 /* TeamRankingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRankingsResponse.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECBF6342A90E02B00B93271 /* sports_formula1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sports_formula1App.swift; sourceTree = "<group>"; };
 		CECBF6382A90E02D00B93271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				CEC824042A98900F00B60966 /* DriverRankingsResponse.swift */,
 				CEC824072A9896DB00B60966 /* TeamDto.swift */,
 				CEC8240A2A98978700B60966 /* DriverDto.swift */,
+				CEC8240C2A989BD300B60966 /* TeamRankingsResponse.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				CE8B0F1B2A95FD0400DF8AC0 /* DriverView.swift in Sources */,
 				CE8B0F1E2A95FE7000DF8AC0 /* DriverModel.swift in Sources */,
 				CE8B0F4C2A96397F00DF8AC0 /* CircuitsScreenView.swift in Sources */,
+				CEC8240D2A989BD300B60966 /* TeamRankingsResponse.swift in Sources */,
 				CE8B0F232A9605E400DF8AC0 /* DriverMiniView.swift in Sources */,
 				CEC824082A9896DB00B60966 /* TeamDto.swift in Sources */,
 				CE8B0F322A96146500DF8AC0 /* RaceSummaryView.swift in Sources */,

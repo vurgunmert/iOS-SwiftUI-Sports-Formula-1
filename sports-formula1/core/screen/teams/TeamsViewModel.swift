@@ -9,35 +9,20 @@ import Foundation
 
 class TeamsViewModel: ObservableObject {
     
-    @Published var models: [TeamModel] = [
+    private let repository = FormulaRepository()
     
-        TeamModel(position: 1,
-                  name: "Red Bull Racing",
-                  points: 503,
-                  imageUrl: "https://media.api-sports.io/formula-1/teams/1.png",
-                  driver1Name: "Max Verstappen",
-                  driver2Name: "Sergio Perez"),
-        
-        TeamModel(position: 1,
-                  name: "Red Bull Racing",
-                  points: 503,
-                  imageUrl: "https://media.api-sports.io/formula-1/teams/1.png",
-                  driver1Name: "Max Verstappen",
-                  driver2Name: "Sergio Perez"),
-        
-        TeamModel(position: 1,
-                  name: "Red Bull Racing",
-                  points: 503,
-                  imageUrl: "https://media.api-sports.io/formula-1/teams/1.png",
-                  driver1Name: "Max Verstappen",
-                  driver2Name: "Sergio Perez"),
-        
-        TeamModel(position: 1,
-                  name: "Red Bull Racing",
-                  points: 503,
-                  imageUrl: "https://media.api-sports.io/formula-1/teams/1.png",
-                  driver1Name: "Max Verstappen",
-                  driver2Name: "Sergio Perez")
+    @Published var models: [TeamModel] = []
     
-    ]
+    init() {
+        repository.getTeams(onResponse: { items in
+            self.models = items.map( {
+                TeamModel(position: $0.position,
+                          name: $0.team.name,
+                          points: $0.points,
+                          imageUrl: $0.team.logo,
+                          driver1Name: "Driver 1",
+                          driver2Name: "Driver 2")
+            })
+        })
+    }
 }
