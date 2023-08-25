@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct DriversScreenView: View {
+    
+    @StateObject var viewModel = DriversViewModel()
+    
     var body: some View {
-        Text("DriversScreenView")
+        
+        List(viewModel.models) { model in
+            DriverView(model: model)
+        }
+        .frame(maxWidth: .infinity)
+        .listStyle(GroupedListStyle())
+        .padding(.top)
+        .background(.black)
     }
 }
 

@@ -15,7 +15,7 @@ struct DriverView: View {
     var body: some View {
         
         
-        VStack() {
+        VStack(alignment: .center) {
             
             HStack(alignment: .top) {
                 Text(String(model.rank))
@@ -51,12 +51,11 @@ struct DriverView: View {
                 Text(String(model.driverNo))
                     .foregroundColor(.red)
                     .bold()
-                    .font(.system(size: 80, weight: .heavy))
+                    .font(.system(size: 60, weight: .heavy))
                 KFImage.url(URL(string: model.imageUrl))
             }
             
         }
-        .frame(width: 300)
         .padding(10)
         .overlay(
             RoundedRectangle(cornerRadius: 16)

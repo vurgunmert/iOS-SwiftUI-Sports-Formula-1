@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct DriverModel {
+struct DriverModel: Identifiable {
+    let id = UUID()
     let rank: Int
     let points: Int
     let name: String
