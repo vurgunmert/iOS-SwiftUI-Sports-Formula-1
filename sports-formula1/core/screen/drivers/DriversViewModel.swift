@@ -9,30 +9,24 @@ import Foundation
 
 class DriversViewModel: ObservableObject {
     
-    @Published var models: [DriverModel] = [
-        DriverModel(rank: 1,
-                    
-                    points: 314,
-                    name: "Max Verstappen",
-                    countryCode: "NL",
-                    teamName: "Red Bull Racing",
-                    driverNo: 25,
-                    imageUrl: "https://media-3.api-sports.io/formula-1/drivers/25.png"),
-        
-        DriverModel(rank: 2,
-                    points: 313,
-                    name: "Mercedes Petronas",
-                    countryCode: "GB",
-                    teamName: "Red Bull Racing",
-                    driverNo: 20,
-                    imageUrl: "https://media-3.api-sports.io/formula-1/drivers/20.png"),
-        
-        DriverModel(rank: 3,
-                    points: 312,
-                    name: "Sergio Perez",
-                    countryCode: "IT",
-                    teamName: "Red Bull Racing",
-                    driverNo: 10,
-                    imageUrl: "https://media-3.api-sports.io/formula-1/drivers/10.png")
-    ]
+    private let repository = FormulaRepository()
+    
+    @Published var models: [DriverModel] = []
+    
+    init() {
+
+        //TODO: threading
+        repository.getDrivers(onResponse: { items in
+
+            self.models = items.map({
+                DriverModel(rank: $0.position,
+                            points: $0.points,
+                            name: $0.driver.name,
+                            countryCode: "nan", //TODO: Update
+                            teamName: $0.team.name,
+                            driverNo: $0.driver.number,
+                            imageUrl: $0.driver.image)
+            })
+        })
+    }
 }
