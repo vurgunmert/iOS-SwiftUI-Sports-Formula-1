@@ -46,6 +46,8 @@
 		CEC824132A989E8E00B60966 /* CompetitionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824122A989E8E00B60966 /* CompetitionDto.swift */; };
 		CEC824152A989EA600B60966 /* CircuitDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824142A989EA600B60966 /* CircuitDto.swift */; };
 		CEC824172A989EB900B60966 /* LapsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824162A989EB900B60966 /* LapsDto.swift */; };
+		CEC824192A98ABE300B60966 /* CircuitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824182A98ABE300B60966 /* CircuitsResponse.swift */; };
+		CEC8241B2A98AC4D00B60966 /* LapRecordDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8241A2A98AC4D00B60966 /* LapRecordDto.swift */; };
 		CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBF6342A90E02B00B93271 /* sports_formula1App.swift */; };
 		CECBF6392A90E02D00B93271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF6382A90E02D00B93271 /* Assets.xcassets */; };
 		CECBF63C2A90E02D00B93271 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF63B2A90E02D00B93271 /* Preview Assets.xcassets */; };
@@ -91,6 +93,8 @@
 		CEC824122A989E8E00B60966 /* CompetitionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionDto.swift; sourceTree = "<group>"; };
 		CEC824142A989EA600B60966 /* CircuitDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDto.swift; sourceTree = "<group>"; };
 		CEC824162A989EB900B60966 /* LapsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapsDto.swift; sourceTree = "<group>"; };
+		CEC824182A98ABE300B60966 /* CircuitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsResponse.swift; sourceTree = "<group>"; };
+		CEC8241A2A98AC4D00B60966 /* LapRecordDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapRecordDto.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECBF6342A90E02B00B93271 /* sports_formula1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sports_formula1App.swift; sourceTree = "<group>"; };
 		CECBF6382A90E02D00B93271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 				CEC824122A989E8E00B60966 /* CompetitionDto.swift */,
 				CEC824142A989EA600B60966 /* CircuitDto.swift */,
 				CEC824162A989EB900B60966 /* LapsDto.swift */,
+				CEC824182A98ABE300B60966 /* CircuitsResponse.swift */,
+				CEC8241A2A98AC4D00B60966 /* LapRecordDto.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC8241B2A98AC4D00B60966 /* LapRecordDto.swift in Sources */,
 				CE8B0F422A96376D00DF8AC0 /* LandingScreenView.swift in Sources */,
 				CE8B0F212A95FF1D00DF8AC0 /* TextUtils.swift in Sources */,
 				CE8B0F1B2A95FD0400DF8AC0 /* DriverView.swift in Sources */,
@@ -473,6 +480,7 @@
 				CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */,
 				CE8B0F4A2A96397100DF8AC0 /* TeamsScreenView.swift in Sources */,
 				CE8B0F2D2A960B9E00DF8AC0 /* CircuitModel.swift in Sources */,
+				CEC824192A98ABE300B60966 /* CircuitsResponse.swift in Sources */,
 				CEC824012A98899E00B60966 /* FormulaRepository.swift in Sources */,
 				CE8B0F482A96395F00DF8AC0 /* DriversScreenView.swift in Sources */,
 				CE8B0F2F2A960CDC00DF8AC0 /* CircuitView.swift in Sources */,
