@@ -13,7 +13,7 @@ struct TeamView: View {
     let model: TeamModel
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             
             HStack {
                 Text(String(model.position))
@@ -47,7 +47,6 @@ struct TeamView: View {
                 }
             }
         }
-        .frame(width: 300)
         .padding(10)
         .overlay(
             RoundedRectangle(cornerRadius: 16)

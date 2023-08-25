@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct TeamsScreenView: View {
+    
+    @StateObject var viewModel = TeamsViewModel()
+    
     var body: some View {
-        Text("TeamsScreenView")
+        List(viewModel.models) { model in
+            TeamView(model: model)
+        }
+        .frame(maxWidth: .infinity)
+        .listStyle(GroupedListStyle())
+        .padding(.top)
+        .background(.black)
     }
 }
 
