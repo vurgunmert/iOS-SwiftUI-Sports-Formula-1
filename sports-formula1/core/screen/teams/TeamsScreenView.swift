@@ -2,7 +2,7 @@
 //  TeamsScreenView.swift
 //  sports-formula1
 //
-//  Created by user on 23.08.2023.
+//  Created by Mert Vurgun on 23.08.2023.
 //
 
 import SwiftUI

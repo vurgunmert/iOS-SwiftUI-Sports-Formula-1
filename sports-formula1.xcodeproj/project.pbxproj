@@ -32,6 +32,7 @@
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
 		CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */; };
 		CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED932A93768D008FAC22 /* LastRaceView.swift */; };
+		CEC823F82A9880FE00B60966 /* RacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC823F72A9880FE00B60966 /* RacesViewModel.swift */; };
 		CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBF6342A90E02B00B93271 /* sports_formula1App.swift */; };
 		CECBF6392A90E02D00B93271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF6382A90E02D00B93271 /* Assets.xcassets */; };
 		CECBF63C2A90E02D00B93271 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF63B2A90E02D00B93271 /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		CE8B0F522A963B7B00DF8AC0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
 		CEB9ED932A93768D008FAC22 /* LastRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRaceView.swift; sourceTree = "<group>"; };
+		CEC823F72A9880FE00B60966 /* RacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewModel.swift; sourceTree = "<group>"; };
 		CECBF6312A90E02B00B93271 /* sports-formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sports-formula1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECBF6342A90E02B00B93271 /* sports_formula1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sports_formula1App.swift; sourceTree = "<group>"; };
 		CECBF6382A90E02D00B93271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8B0F452A96394800DF8AC0 /* RacesScreenView.swift */,
+				CEC823F72A9880FE00B60966 /* RacesViewModel.swift */,
 			);
 			path = races;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				CE8B0F2F2A960CDC00DF8AC0 /* CircuitView.swift in Sources */,
 				CE8B0F3A2A96338800DF8AC0 /* ColorUtils.swift in Sources */,
 				CE8B0F362A961D9A00DF8AC0 /* DateUtils.swift in Sources */,
+				CEC823F82A9880FE00B60966 /* RacesViewModel.swift in Sources */,
 				CE8B0F282A96090600DF8AC0 /* TeamModel.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* sports_formula1App.swift in Sources */,

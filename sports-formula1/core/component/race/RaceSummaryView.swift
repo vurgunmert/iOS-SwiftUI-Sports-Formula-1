@@ -124,7 +124,7 @@ struct RaceSummaryView: View {
     let releaseDate = Date()
 }
 
-struct RaceScheduleView_Previews: PreviewProvider {
+struct RaceSummaryView_Previews: PreviewProvider {
     static var previews: some View {
         RaceSummaryView(model: RaceSummaryModel(name: "Belgium Grand Prix",
                                                 country: "Belgium",
