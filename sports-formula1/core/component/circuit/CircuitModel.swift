@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct CircuitModel {
+struct CircuitModel: Identifiable {
+    let id = UUID()
     let name: String
     let imageUrl: String
     let city: String

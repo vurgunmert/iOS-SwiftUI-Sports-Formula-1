@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct CircuitsScreenView: View {
+    
+    @StateObject var viewModel = CircuitsViewModel()
+    
     var body: some View {
-        Text("CircuitsScreenView")
+        List(viewModel.models) { model in
+            CircuitView(model: model)
+        }
+        .frame(maxWidth: .infinity)
+        .listStyle(GroupedListStyle())
+        .padding(.top)
+        .background(.black)
     }
 }
 
