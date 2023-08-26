@@ -11,7 +11,8 @@ import Kingfisher
 struct RaceSummaryView: View {
     
     let model: RaceSummaryModel
-    
+    @State private var didTap:Bool = false
+
     var body: some View {
         
         ZStack{
@@ -117,6 +118,7 @@ struct RaceSummaryView: View {
                 }
             }
         }
+        .shadow(radius: 2)
     }
     
     let releaseDate = Date()
