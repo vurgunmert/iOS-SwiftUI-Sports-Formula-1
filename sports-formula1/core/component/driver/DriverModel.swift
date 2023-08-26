@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct DriverModel: Identifiable {
-    let id = UUID()
+struct DriverModel: Identifiable, Equatable {
+    let id: Int
     let rank: Int
     let points: Int
     let name: String
-    let countryCode: String
+    let countryCode: String?
     let teamName: String
     let driverNo: Int
     let imageUrl: String

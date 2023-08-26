@@ -9,17 +9,21 @@ import SwiftUI
 
 struct DriversScreenView: View {
     
-    @StateObject var viewModel = DriversViewModel()
+    @EnvironmentObject var ranking: Ranking
     
     var body: some View {
         
-        List(viewModel.models) { model in
+        List(ranking.drivers) { model in
             DriverView(model: model)
         }
-        .frame(maxWidth: .infinity)
         .listStyle(GroupedListStyle())
-        .padding(.top)
-        .background(.black)
+        .task {
+            do {
+                try await ranking.loadDrivers()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
