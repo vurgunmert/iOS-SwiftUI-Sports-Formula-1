@@ -13,19 +13,12 @@ struct HomeScreenView: View {
     @EnvironmentObject var catalog: Catalog
     
     var body: some View {
-        
+      
         List {
+            Text("Schedule")
+                .font(.system(size: 24, weight: .thin))
             
             ForEach(catalog.races, content: { model in
-                
-                if model.dateTime?.timeIntervalSinceNow ?? 0 > 0 {
-                    Text("Next")
-                        .font(.system(size: 24, weight: .thin))
-                } else {
-                    Text("Previous")
-                        .font(.system(size: 24, weight: .thin))
-                }
-                
                 RaceSummaryView(model: model)
                     .shadow(radius: 2)
                     .listRowSeparator(.hidden)
@@ -37,6 +30,13 @@ struct HomeScreenView: View {
             
             ForEach(ranking.teams) { model in
                 TeamMiniView(model: model)
+                    .swipeActions(edge: .trailing, content: {
+                        Button(role: .none, action: {
+                            print("TODO_TEAM_SWIPE_ACTION")
+                        } ) {
+                            Label("Details", systemImage: "rectangle.expand.vertical")
+                        }
+                    })
             }
             
         }
