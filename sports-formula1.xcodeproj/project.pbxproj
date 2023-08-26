@@ -48,6 +48,8 @@
 		CECBF63C2A90E02D00B93271 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBF63B2A90E02D00B93271 /* Preview Assets.xcassets */; };
 		CED00D312A9A4EB900F6055D /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED00D302A9A4EB900F6055D /* Ranking.swift */; };
 		CED00D342A9A65C100F6055D /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED00D332A9A65C100F6055D /* Catalog.swift */; };
+		CED00D362A9A9FFA00F6055D /* RaceDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED00D352A9A9FFA00F6055D /* RaceDetailScreen.swift */; };
+		CED00D382A9AA00F00F6055D /* TeamDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED00D372A9AA00F00F6055D /* TeamDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		CECBF63B2A90E02D00B93271 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CED00D302A9A4EB900F6055D /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		CED00D332A9A65C100F6055D /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		CED00D352A9A9FFA00F6055D /* RaceDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailScreen.swift; sourceTree = "<group>"; };
+		CED00D372A9AA00F00F6055D /* TeamDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailScreen.swift; sourceTree = "<group>"; };
 		D7DEC019CF1E074B48B0D519 /* Pods-sports-formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sports-formula1.release.xcconfig"; path = "Target Support Files/Pods-sports-formula1/Pods-sports-formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8B0F452A96394800DF8AC0 /* RacesScreen.swift */,
+				CED00D352A9A9FFA00F6055D /* RaceDetailScreen.swift */,
 			);
 			path = races;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8B0F492A96397100DF8AC0 /* TeamsScreen.swift */,
+				CED00D372A9AA00F00F6055D /* TeamDetailScreen.swift */,
 			);
 			path = teams;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				CE8B0F1E2A95FE7000DF8AC0 /* DriverModel.swift in Sources */,
 				CE8B0F4C2A96397F00DF8AC0 /* CircuitsScreenView.swift in Sources */,
 				CEC8240D2A989BD300B60966 /* TeamRankingsResponse.swift in Sources */,
+				CED00D362A9A9FFA00F6055D /* RaceDetailScreen.swift in Sources */,
 				CE8B0F232A9605E400DF8AC0 /* DriverMiniView.swift in Sources */,
 				CEC824082A9896DB00B60966 /* TeamDto.swift in Sources */,
 				CE8B0F322A96146500DF8AC0 /* RaceSummaryView.swift in Sources */,
@@ -490,6 +497,7 @@
 				CEC8241F2A98D3E000B60966 /* ApiSportsService.swift in Sources */,
 				CE8B0F282A96090600DF8AC0 /* TeamModel.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
+				CED00D382A9AA00F00F6055D /* TeamDetailScreen.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* SwiftUI_Formula1App.swift in Sources */,
 				CEC824152A989EA600B60966 /* CircuitDto.swift in Sources */,
 				CEC824172A989EB900B60966 /* LapsDto.swift in Sources */,
