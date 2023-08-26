@@ -6,23 +6,57 @@
 //
 
 import Foundation
+import Combine
 
 class TeamsViewModel: ObservableObject {
     
-    private let repository = FormulaRepository()
+    private let service = ApiSportsService()
     
     @Published var models: [TeamModel] = []
     
+    private var cancellable = Set<AnyCancellable>()
+    
     init() {
-        repository.getTeams(onResponse: { items in
-            self.models = items.map( {
-                TeamModel(position: $0.position,
-                          name: $0.team.name,
-                          points: $0.points,
-                          imageUrl: $0.team.logo,
-                          driver1Name: "Driver 1",
-                          driver2Name: "Driver 2")
-            })
-        })
+        loadData()
+    }
+    
+    private func loadData() {
+        
+        service
+            .teamRanking
+            .sink(
+                receiveCompletion: { status in
+                    switch status {
+                        case .finished:
+                            print("Publisher:getTeamRanking:Completed")
+                            break
+                        case .failure(let error):
+                            print("Publisher:getTeamRanking:Receiver error \(error)")
+                            break
+                    }
+                },
+                receiveValue: {[weak self] items in
+                    print("Publisher:getTeamRanking:Data received")
+                    guard let self = self else { return }
+                    
+                    let uiModels = items.response.map({ item in
+                        self.convertDomainToUIModel(item: item)
+                    })
+                    
+                    DispatchQueue.main.async {
+                        self.models = uiModels
+                    }
+                }
+            )
+            .store(in: &cancellable)
+    }
+    
+    private func convertDomainToUIModel(item: TeamRankingItem) -> TeamModel {
+        return TeamModel(position: item.position,
+                         name: item.team.name,
+                         points: item.points,
+                         imageUrl: item.team.logo,
+                         driver1Name: "Driver 1",
+                         driver2Name: "Driver 2")
     }
 }

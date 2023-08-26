@@ -56,6 +56,7 @@ class FormulaRepository {
         
         request.setValue("b049b3527733bfbf098106fc59b5523d", forHTTPHeaderField: "x-rapidapi-key")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
