@@ -75,29 +75,21 @@ class Ranking: ObservableObject  {
 
     func loadDrivers() async throws {
         
-        func convertDomainToUIModel(item: TeamRankingItem) -> TeamModel {
-            return TeamModel(id: item.team.id,
-                             position: item.position,
-                             name: item.team.name,
-                             points: item.points,
-                             imageUrl: item.team.logo)
-        }
-        
         do {
             try await client.getServiceRequest(DriverRankingsResponse.self, endpoint: "rankings/drivers?season=2023")
                 .sink(
                     receiveCompletion: { status in
                         switch status {
                             case .finished:
-                                print("Publisher:getDriverRanking:Completed")
+                                print("Ranking:loadDrivers:finished")
                                 break
                             case .failure(let error):
-                                print("Publisher:getDriverRanking:Receiver error \(error)")
+                                print("Ranking:loadDrivers:Receiver error \(error)")
                                 break
                         }
                     },
                     receiveValue: {[weak self] items in
-                        print("Publisher:getDriverRanking:Data received")
+                        print("Ranking:loadDrivers:Data received")
                         guard let self = self else { return }
                         
                         let driverModels = items.response.map({

@@ -13,32 +13,32 @@ class HomeViewModel: ObservableObject {
  
     @Published var raceSummaries: [RaceSummaryModel] = [
     
-        RaceSummaryModel(name:  "Netherlands Grand Prix",
-                         country: "Netherlands",
-                         circuitName: "Circuit Zandvoort",
-                         dateTime: dateFrom(date: "2023-08-27T13:00:00+00:00"),
-                         drivers: nil),
-        
-        RaceSummaryModel(name:  "Belgium Grand Prix",
-                         country: "Belgium",
-                         circuitName: "Circuit de Spa-Francorchamps",
-                         dateTime: dateFrom(date: "2023-07-30T13:00:00+00:00"),
-                         drivers: [
-                            RaceSummaryModel.Driver(position: 1,
-                                                    abbr: "VER",
-                                                    imageUrl:  "https://media-2.api-sports.io/formula-1/drivers/25.png",
-                                                    time: "1:22:30.450"),
-                            
-                            RaceSummaryModel.Driver(position: 2,
-                                                    abbr: "VER",
-                                                    imageUrl:  "https://media-2.api-sports.io/formula-1/drivers/10.png",
-                                                    time: "+22.305s"),
-                            
-                            RaceSummaryModel.Driver(position: 3,
-                                                    abbr: "LEC",
-                                                    imageUrl:  "https://media-2.api-sports.io/formula-1/drivers/34.png",
-                                                    time: "+32.259s"),
-                         ])
+//        RaceSummaryModel(name:  "Netherlands Grand Prix",
+//                         country: "Netherlands",
+//                         circuitName: "Circuit Zandvoort",
+//                         dateTime: dateFrom(date: "2023-08-27T13:00:00+00:00"),
+//                         drivers: nil),
+//
+//        RaceSummaryModel(name:  "Belgium Grand Prix",
+//                         country: "Belgium",
+//                         circuitName: "Circuit de Spa-Francorchamps",
+//                         dateTime: dateFrom(date: "2023-07-30T13:00:00+00:00"),
+//                         drivers: [
+//                            RaceSummaryModel.Driver(position: 1,
+//                                                    abbr: "VER",
+//                                                    imageUrl:  "https://media-2.api-sports.io/formula-1/drivers/25.png",
+//                                                    time: "1:22:30.450"),
+//
+//                            RaceSummaryModel.Driver(position: 2,
+//                                                    abbr: "VER",
+//                                                    imageUrl:  "https://media-2.api-sports.io/formula-1/drivers/10.png",
+//                                                    time: "+22.305s"),
+//
+//                            RaceSummaryModel.Driver(position: 3,
+//                                                    abbr: "LEC",
+//                                                    imageUrl:  "https://media-2.api-sports.io/formula-1/drivers/34.png",
+//                                                    time: "+32.259s"),
+//                         ])
         
     ]
     

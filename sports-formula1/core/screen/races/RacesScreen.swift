@@ -9,17 +9,21 @@ import SwiftUI
 
 struct RacesScreenView: View {
     
-    @StateObject var viewModel = RacesViewModel()
+    @EnvironmentObject var catalog: Catalog
     
     var body: some View {
         
-        List(viewModel.models) { model in
+        List(catalog.races) { model in
             RaceSummaryView(model: model)
         }
-        .frame(maxWidth: .infinity)
         .listStyle(GroupedListStyle())
-        .padding(.top)
-        .background(.black)
+        .task {
+            do {
+                try await catalog.loadRaces()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

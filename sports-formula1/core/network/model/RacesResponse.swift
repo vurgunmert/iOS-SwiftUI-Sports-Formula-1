@@ -33,7 +33,7 @@ struct RacesResponse: Codable {
 
 struct RacesResponseItem: Codable {
     
-    var id          : Int?         = nil
+    var id          : Int
     var competition : CompetitionDto? = nil
     var circuit     : CircuitDto?     = nil
     var season      : Int?         = nil
@@ -66,7 +66,7 @@ struct RacesResponseItem: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        id          = try values.decodeIfPresent(Int.self         , forKey: .id          )
+        id          = try values.decode(Int.self         , forKey: .id          )
         competition = try values.decodeIfPresent(CompetitionDto.self , forKey: .competition )
         circuit     = try values.decodeIfPresent(CircuitDto.self     , forKey: .circuit     )
         season      = try values.decodeIfPresent(Int.self         , forKey: .season      )
@@ -80,9 +80,4 @@ struct RacesResponseItem: Codable {
         status      = try values.decodeIfPresent(String.self      , forKey: .status      )
         
     }
-    
-    init() {
-        
-    }
-    
 }

@@ -14,6 +14,7 @@ struct SwiftUI_Formula1App: App {
         WindowGroup {
             LandingScreenView()
                 .environmentObject(Ranking(client: ApiSportsHttpClient()))
+                .environmentObject(Catalog(client: ApiSportsHttpClient()))
         }
     }
 }

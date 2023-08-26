@@ -7,9 +7,12 @@
 
 import Foundation
 
-struct RaceSummaryModel: Identifiable {
-    let id = UUID()
+struct RaceSummaryModel: Identifiable, Equatable {
+    static func == (lhs: RaceSummaryModel, rhs: RaceSummaryModel) -> Bool {
+        return lhs.id == rhs.id
+    }
     
+    let id: Int
     let name: String
     let country: String
     let circuitName: String

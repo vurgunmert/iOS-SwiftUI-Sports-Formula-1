@@ -47,7 +47,7 @@ struct RaceSummaryView: View {
                             .padding(.trailing)
                     }
                 }
-
+                
                 
                 if let drivers = model.drivers, !drivers.isEmpty {
                     Divider()
@@ -126,24 +126,26 @@ struct RaceSummaryView: View {
 
 struct RaceSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        RaceSummaryView(model: RaceSummaryModel(name: "Belgium Grand Prix",
-                                                country: "Belgium",
-                                                circuitName: "Circuit de Spa-Francorchamps",
-                                                dateTime: dateFrom(date: "2023-07-30T13:00:00+00:00"),
-                                                drivers: [
-                                                    RaceSummaryModel.Driver(position: 1,
-                                                                            abbr: "VER",
-                                                                            imageUrl:  "https://media-1.api-sports.io/formula-1/drivers/25.png",
-                                                                            time: "1:27:57.940"),
-                                                    RaceSummaryModel.Driver(position: 2,
-                                                                            abbr: "PER",
-                                                                            imageUrl:  "https://media-1.api-sports.io/formula-1/drivers/25.png",
-                                                                            time: "1:27:57.940"),
-                                                    RaceSummaryModel.Driver(position: 3,
-                                                                            abbr: "ALO",
-                                                                            imageUrl:  "https://media-1.api-sports.io/formula-1/drivers/25.png",
-                                                                            time: "1:27:57.940")
-                                                    
-                                                ]))
+        RaceSummaryView(model: RaceSummaryModel(
+            id: 1,
+            name: "Belgium Grand Prix",
+            country: "Belgium",
+            circuitName: "Circuit de Spa-Francorchamps",
+            dateTime: dateFrom(date: "2023-07-30T13:00:00+00:00"),
+            drivers: [
+                RaceSummaryModel.Driver(position: 1,
+                                        abbr: "VER",
+                                        imageUrl:  "https://media-1.api-sports.io/formula-1/drivers/25.png",
+                                        time: "1:27:57.940"),
+                RaceSummaryModel.Driver(position: 2,
+                                        abbr: "PER",
+                                        imageUrl:  "https://media-1.api-sports.io/formula-1/drivers/25.png",
+                                        time: "1:27:57.940"),
+                RaceSummaryModel.Driver(position: 3,
+                                        abbr: "ALO",
+                                        imageUrl:  "https://media-1.api-sports.io/formula-1/drivers/25.png",
+                                        time: "1:27:57.940")
+                
+            ]))
     }
 }
