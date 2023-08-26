@@ -55,16 +55,16 @@ class ApiSportsService: ApiSportsServiceProtocol {
         return try await getServiceRequest(RacesResponse.self, endpoint: "races?season=2023&type=race")
     }
     
+    func getCircuits() async throws -> AnyPublisher<CircuitsResponse, Error> {
+        return try await getServiceRequest(CircuitsResponse.self, endpoint: "circuits")
+    }
+    
     func getTeamRankings() async throws -> AnyPublisher<TeamRankingsResponse, Error> {
         return try await getServiceRequest(TeamRankingsResponse.self, endpoint: "rankings/teams?season=2023")
     }
     
     func getDriverRankings() async throws -> AnyPublisher<DriverRankingsResponse, Error> {
         return try await getServiceRequest(DriverRankingsResponse.self, endpoint: "rankings/drivers?season=2023")
-    }
-    
-    func getCircuits() async throws -> AnyPublisher<CircuitsResponse, Error> {
-        return try await getServiceRequest(CircuitsResponse.self, endpoint: "circuits")
     }
 }
 
@@ -92,6 +92,47 @@ class MockedApiSportsService : ApiSportsServiceProtocol {
                                                                         location: LocationDto.init(country: "Country-3", city: "City-3")),
                                        circuit: CircuitDto.init(id: 3, name: "Circuit-3"),
                                        date: "2023-07-30T13:00:00+00:00"),
+            ])
+        )
+        .setFailureType(to: Error.self)
+        .eraseToAnyPublisher()
+    }
+    
+    func getCircuits() async throws -> AnyPublisher<CircuitsResponse, Error> {
+        return Just(
+            CircuitsResponse.init(items: [
+                CircuitsResponseItem.init(id: 1,
+                                          name: "Melbourne Grand Prix Circuit",
+                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
+                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
+                                          firstGrandPrix: 1996,
+                                          laps: 56,
+                                          length: "5.303 Kms",
+                                          raceDistance: "307.574 kms"),
+                CircuitsResponseItem.init(id: 2,
+                                          name: "Melbourne Grand Prix Circuit",
+                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
+                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
+                                          firstGrandPrix: 1996,
+                                          laps: 56,
+                                          length: "5.303 Kms",
+                                          raceDistance: "307.574 kms"),
+                CircuitsResponseItem.init(id: 3,
+                                          name: "Melbourne Grand Prix Circuit",
+                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
+                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
+                                          firstGrandPrix: 1996,
+                                          laps: 56,
+                                          length: "5.303 Kms",
+                                          raceDistance: "307.574 kms"),
+                CircuitsResponseItem.init(id: 4,
+                                          name: "Melbourne Grand Prix Circuit",
+                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
+                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
+                                          firstGrandPrix: 1996,
+                                          laps: 56,
+                                          length: "5.303 Kms",
+                                          raceDistance: "307.574 kms")
             ])
         )
         .setFailureType(to: Error.self)
@@ -140,47 +181,6 @@ class MockedApiSportsService : ApiSportsServiceProtocol {
                 DriverRankingItem.init(position: 4, driver: DriverDto.init(id: 4, name: "Driver-4", number: 4, image: "https://media-3.api-sports.io/formula-1/drivers/4.png"),
                                        team: TeamDto.init(id: 1, name: "Team-4", logo: "https://media.api-sports.io/formula-1/teams/4.png"),
                                        points: 126)
-            ])
-        )
-        .setFailureType(to: Error.self)
-        .eraseToAnyPublisher()
-    }
-    
-    func getCircuits() async throws -> AnyPublisher<CircuitsResponse, Error> {
-        return Just(
-            CircuitsResponse.init(items: [
-                CircuitsResponseItem.init(id: 1,
-                                          name: "Melbourne Grand Prix Circuit",
-                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
-                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
-                                          firstGrandPrix: 1996,
-                                          laps: 56,
-                                          length: "5.303 Kms",
-                                          raceDistance: "307.574 kms"),
-                CircuitsResponseItem.init(id: 2,
-                                          name: "Melbourne Grand Prix Circuit",
-                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
-                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
-                                          firstGrandPrix: 1996,
-                                          laps: 56,
-                                          length: "5.303 Kms",
-                                          raceDistance: "307.574 kms"),
-                CircuitsResponseItem.init(id: 3,
-                                          name: "Melbourne Grand Prix Circuit",
-                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
-                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
-                                          firstGrandPrix: 1996,
-                                          laps: 56,
-                                          length: "5.303 Kms",
-                                          raceDistance: "307.574 kms"),
-                CircuitsResponseItem.init(id: 4,
-                                          name: "Melbourne Grand Prix Circuit",
-                                          image: "https://media.api-sports.io/formula-1/circuits/1.png",
-                                          competition: CompetitionDto.init(id: 1, name: "Australia Grand Prix", location: LocationDto(country: "Australia", city: "Melbourne")),
-                                          firstGrandPrix: 1996,
-                                          laps: 56,
-                                          length: "5.303 Kms",
-                                          raceDistance: "307.574 kms")
             ])
         )
         .setFailureType(to: Error.self)

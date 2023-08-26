@@ -9,13 +9,14 @@ import SwiftUI
 
 struct HomeScreenView: View {
     
-    @StateObject var viewModel = HomeViewModel()
+    @EnvironmentObject var ranking: Ranking
+    @EnvironmentObject var catalog: Catalog
     
     var body: some View {
         
         List {
             
-            ForEach(viewModel.raceSummaries, content: { model in
+            ForEach(catalog.races, content: { model in
                 
                 if model.dateTime?.timeIntervalSinceNow ?? 0 > 0 {
                     Text("Next")
@@ -34,15 +35,20 @@ struct HomeScreenView: View {
                 .font(.system(size: 24, weight: .thin))
                 .padding(.top, 30)
             
-            ForEach(viewModel.teams) { model in
+            ForEach(ranking.teams) { model in
                 TeamMiniView(model: model)
             }
             
         }
-        .frame(maxWidth: .infinity)
         .listStyle(GroupedListStyle())
-        .padding(.top)
-        .background(.black)
+        .task {
+            do {
+                try await catalog.loadRaces()
+                try await ranking.loadTeams()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
