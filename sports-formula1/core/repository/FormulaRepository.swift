@@ -47,38 +47,6 @@ class FormulaRepository {
     }
     
     
-    func getTeams(onResponse: @escaping ([TeamRankingItem]) -> Void) {
-        
-        let url = URL(string: "https://v1.formula-1.api-sports.io/rankings/teams?season=2023")!
-        //TODO: Combine rankings with teams api
-        
-        var request = URLRequest(url: url)
-        
-        request.setValue("b049b3527733bfbf098106fc59b5523d", forHTTPHeaderField: "x-rapidapi-key")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if let data = data {
-                do {
-                    let rankingResponse = try JSONDecoder().decode(TeamRankingsResponse.self, from: data)
-                    
-                    onResponse(rankingResponse.response)
-                    
-                } catch(let error) {
-                    print(error)
-                }
-            } else if let error = error {
-                print("HTTP Request Failed \(error)")
-            }
-            
-        }
-        
-        task.resume()
-    }
-    
-    
     func getRaces(onResponse: @escaping ([RacesResponseItem]) -> Void) {
         
         let url = URL(string: "https://v1.formula-1.api-sports.io/races?season=2023&type=race")!

@@ -13,45 +13,30 @@ struct TeamView: View {
     let model: TeamModel
     
     var body: some View {
-        VStack(alignment: .center) {
-            
-            HStack {
-                Text(String(model.position))
-                    .bold()
-                    .font(.system(size: 30, weight: .heavy))
-                Spacer()
-                Text("\(model.points)\nPTS")
-            }
-            
-            Text(model.name)
+        
+        HStack(alignment: .top) {
+            Text(String(model.position))
                 .bold()
-                .font(.system(size: 28))
-            
-            if let imageUrl = model.imageUrl {
-                KFImage.url(URL(string: imageUrl))
-            }
-            
-            if let driver1Name = model.driver1Name, let driver2Name = model.driver2Name {
-                HStack {
-                    
-                    Text(driver1Name)
-                        .bold()
-                        .font(.system(size: 28))
-                    
-                    Spacer()
-                    
-                    Text(driver2Name)
-                        .bold()
-                        .font(.system(size: 28))
-                    
+                .font(.system(size: 40, weight: .heavy))
+                .padding(.trailing)
+            Spacer()
+            VStack(alignment: .leading) {
+                Text("\(model.points) pts")
+                    .font(.system(size: 30, weight: .semibold))
+                
+                if let imageUrl = model.imageUrl {
+                    KFImage.url(URL(string: imageUrl))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
             }
+            .frame(width: 250)
+            .padding(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(.black, lineWidth: 4)
+            )
         }
-        .padding(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(.black, lineWidth: 4)
-        )
     }
 }
 
@@ -60,8 +45,6 @@ struct TeamView_Previews: PreviewProvider {
         TeamView(model: TeamModel(position: 1,
                                   name: "Red Bull Racing",
                                   points: 503,
-                                  imageUrl: "https://media.api-sports.io/formula-1/teams/1.png",
-                                  driver1Name: "Max Verstappen",
-                                  driver2Name: "Sergio Perez"))
+                                  imageUrl: "https://media.api-sports.io/formula-1/teams/1.png"))
     }
 }

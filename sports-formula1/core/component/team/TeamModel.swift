@@ -7,21 +7,18 @@
 
 import Foundation
 
-struct TeamModel: Identifiable {
-    let id = UUID()
+struct TeamModel: Identifiable, Equatable {
+    let id: Int
     let position: Int
     let name: String
     let points: Int
     let imageUrl: String?
-    let driver1Name: String?
-    let driver2Name: String?
 
-    init(position: Int, name: String, points: Int, imageUrl: String? = nil, driver1Name: String? = nil, driver2Name: String? = nil) {
+    init(id: Int = 0, position: Int, name: String, points: Int, imageUrl: String? = nil) {
+        self.id = id
         self.position = position
         self.name = name
         self.points = points
         self.imageUrl = imageUrl
-        self.driver1Name = driver1Name
-        self.driver2Name = driver2Name
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ApiSportsService.swift
+//  ApiSportsHttpClient.swift
 //  sports-formula1
 //
 //  Created by user on 25.08.2023.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ApiSportsService {
+class ApiSportsHttpClient {
     private let baseUrlString = "https://v1.formula-1.api-sports.io/"
     private let authHeaderKey = "x-rapidapi-key"
     private let authHeaderValue = "b049b3527733bfbf098106fc59b5523d"
@@ -26,7 +26,7 @@ class ApiSportsService {
         return request
     }
     
-    func getServiceRequest <T: Codable>(_ t: T.Type, endpoint: String) -> AnyPublisher<T, Publishers.Decode<Publishers.TryMap<URLSession.DataTaskPublisher, JSONDecoder.Input>, T, JSONDecoder>.Failure> {
+    func getServiceRequest <T: Codable>(_ t: T.Type, endpoint: String) async throws -> AnyPublisher<T, Publishers.Decode<Publishers.TryMap<URLSession.DataTaskPublisher, JSONDecoder.Input>, T, JSONDecoder>.Failure> {
         let request = createRequest(endpoint: endpoint)
         
         return URLSession.shared
@@ -60,5 +60,5 @@ class ApiSportsService {
 //    }
 //
 
-    lazy var teamRanking = self.getServiceRequest(TeamRankingsResponse.self, endpoint: "rankings/teams?season=2023")
+//    lazy var teamRanking = self.getServiceRequest(TeamRankingsResponse.self, endpoint: "rankings/teams?season=2023")
     }

@@ -9,16 +9,20 @@ import SwiftUI
 
 struct TeamsScreenView: View {
     
-    @StateObject var viewModel = TeamsViewModel()
-    
+    @EnvironmentObject private var ranking: Ranking
+
     var body: some View {
-        List(viewModel.models) { model in
+        List(ranking.teams) { model in
             TeamView(model: model)
         }
-        .frame(maxWidth: .infinity)
         .listStyle(GroupedListStyle())
-        .padding(.top)
-        .background(.black)
+        .task {
+            do {
+                try await ranking.loadTeams()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
