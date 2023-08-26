@@ -35,7 +35,8 @@ struct TeamMiniView: View {
 
 struct TeamMiniView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMiniView(model: TeamModel(position: 1,
+        TeamMiniView(model: TeamModel(id: 2,
+                                      position: 1,
                                       name: "Red Bull Racing",
                                       points: 503))
     }

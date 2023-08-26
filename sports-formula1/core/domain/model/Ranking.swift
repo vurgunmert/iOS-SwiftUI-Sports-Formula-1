@@ -11,7 +11,7 @@ import Combine
 @MainActor
 class Ranking: ObservableObject  {
     
-    private let client: ApiSportsHttpClient
+    private let client: ApiSportsServiceProtocol
     private var cancellable = Set<AnyCancellable>()
 
     @Published private(set) var teams: [TeamModel] = .init() {
@@ -26,7 +26,7 @@ class Ranking: ObservableObject  {
         }
     }
     
-    init(client: ApiSportsHttpClient) {
+    init(client: ApiSportsServiceProtocol) {
         self.client = client
     }
 
@@ -41,7 +41,7 @@ class Ranking: ObservableObject  {
         }
         
         do {
-            try await client.getServiceRequest(TeamRankingsResponse.self, endpoint: "rankings/teams?season=2023")
+            try await client.getTeamRankings()
                 .sink(
                     receiveCompletion: { status in
                         switch status {
@@ -76,7 +76,7 @@ class Ranking: ObservableObject  {
     func loadDrivers() async throws {
         
         do {
-            try await client.getServiceRequest(DriverRankingsResponse.self, endpoint: "rankings/drivers?season=2023")
+            try await client.getDriverRankings()
                 .sink(
                     receiveCompletion: { status in
                         switch status {
@@ -88,7 +88,7 @@ class Ranking: ObservableObject  {
                                 break
                         }
                     },
-                    receiveValue: {[weak self] items in
+                    receiveValue: { [weak self] items in
                         print("Ranking:loadDrivers:Data received")
                         guard let self = self else { return }
                         
@@ -115,5 +115,4 @@ class Ranking: ObservableObject  {
             throw error
         }
     }
-    
 }

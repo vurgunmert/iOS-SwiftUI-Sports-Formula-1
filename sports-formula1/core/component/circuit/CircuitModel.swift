@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct CircuitModel: Identifiable {
-    let id = UUID()
+struct CircuitModel: Identifiable, Equatable {
+    static func == (lhs: CircuitModel, rhs: CircuitModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    let id: Int
     let name: String
     let imageUrl: String
     let city: String

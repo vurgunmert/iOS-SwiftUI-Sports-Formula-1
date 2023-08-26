@@ -9,7 +9,7 @@ import Foundation
 
 struct CompetitionDto: Codable {
     
-    var id       : Int?      = nil
+    var id       : Int
     var name     : String?   = nil
     var location : LocationDto? = nil
     
@@ -24,9 +24,14 @@ struct CompetitionDto: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        id       = try values.decodeIfPresent(Int.self      , forKey: .id       )
+        id       = try values.decode(Int.self      , forKey: .id       )
         name     = try values.decodeIfPresent(String.self   , forKey: .name     )
         location = try values.decodeIfPresent(LocationDto.self , forKey: .location )
-        
+    }
+    
+    init(id: Int, name: String? = nil, location: LocationDto? = nil) {
+        self.id = id
+        self.name = name
+        self.location = location
     }
 }

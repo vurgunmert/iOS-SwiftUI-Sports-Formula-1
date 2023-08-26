@@ -15,10 +15,12 @@ struct RaceSummaryView: View {
     var body: some View {
         
         ZStack{
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                .fill(.white)
             
             VStack(alignment: .leading) {
                 
-                Text(model.circuitName)
+                Text(model.name)
                     .font(.system(size: 20, weight: .bold, design: .serif))
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(10)
@@ -115,10 +117,6 @@ struct RaceSummaryView: View {
                 }
             }
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(.orange, lineWidth: 1)
-        )
     }
     
     let releaseDate = Date()

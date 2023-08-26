@@ -32,7 +32,6 @@
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
 		CEB9ED8F2A934D1F008FAC22 /* NextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */; };
 		CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9ED932A93768D008FAC22 /* LastRaceView.swift */; };
-		CEC823FE2A98875100B60966 /* CircuitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC823FD2A98875100B60966 /* CircuitsViewModel.swift */; };
 		CEC824052A98900F00B60966 /* DriverRankingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824042A98900F00B60966 /* DriverRankingsResponse.swift */; };
 		CEC824082A9896DB00B60966 /* TeamDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC824072A9896DB00B60966 /* TeamDto.swift */; };
 		CEC8240B2A98978700B60966 /* DriverDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8240A2A98978700B60966 /* DriverDto.swift */; };
@@ -78,7 +77,6 @@
 		CE8B0F522A963B7B00DF8AC0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
 		CEB9ED932A93768D008FAC22 /* LastRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRaceView.swift; sourceTree = "<group>"; };
-		CEC823FD2A98875100B60966 /* CircuitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsViewModel.swift; sourceTree = "<group>"; };
 		CEC824042A98900F00B60966 /* DriverRankingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingsResponse.swift; sourceTree = "<group>"; };
 		CEC824072A9896DB00B60966 /* TeamDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDto.swift; sourceTree = "<group>"; };
 		CEC8240A2A98978700B60966 /* DriverDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDto.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				CE8B0F4B2A96397F00DF8AC0 /* CircuitsScreenView.swift */,
-				CEC823FD2A98875100B60966 /* CircuitsViewModel.swift */,
 			);
 			path = circuits;
 			sourceTree = "<group>";
@@ -495,7 +492,6 @@
 				CE8B0F362A961D9A00DF8AC0 /* DateUtils.swift in Sources */,
 				CEC8241F2A98D3E000B60966 /* ApiSportsService.swift in Sources */,
 				CE8B0F282A96090600DF8AC0 /* TeamModel.swift in Sources */,
-				CEC823FE2A98875100B60966 /* CircuitsViewModel.swift in Sources */,
 				CEB9ED942A93768D008FAC22 /* LastRaceView.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* SwiftUI_Formula1App.swift in Sources */,
 				CE8B0F532A963B7B00DF8AC0 /* HomeViewModel.swift in Sources */,

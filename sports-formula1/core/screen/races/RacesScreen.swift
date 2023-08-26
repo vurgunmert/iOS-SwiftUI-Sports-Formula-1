@@ -13,8 +13,13 @@ struct RacesScreenView: View {
     
     var body: some View {
         
-        List(catalog.races) { model in
-            RaceSummaryView(model: model)
+        List {
+            ForEach(catalog.races) { model in
+                
+                RaceSummaryView(model: model)
+                    .shadow(radius: 2)
+                    .listRowSeparator(.hidden)
+            }
         }
         .listStyle(GroupedListStyle())
         .task {

@@ -9,16 +9,20 @@ import SwiftUI
 
 struct CircuitsScreenView: View {
     
-    @StateObject var viewModel = CircuitsViewModel()
+    @EnvironmentObject var catalog: Catalog
     
     var body: some View {
-        List(viewModel.models) { model in
+        List(catalog.circuits) { model in
             CircuitView(model: model)
         }
-        .frame(maxWidth: .infinity)
         .listStyle(GroupedListStyle())
-        .padding(.top)
-        .background(.black)
+        .task {
+            do {
+                try await catalog.loadCircuits()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

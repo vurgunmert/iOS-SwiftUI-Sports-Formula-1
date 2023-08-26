@@ -15,7 +15,7 @@ struct CircuitView: View {
     var body: some View {
         
         VStack {
-           
+            
             VStack {
                 Text(model.name)
                     .font(.system(size: 25, weight: .heavy))
@@ -78,7 +78,8 @@ struct CircuitView: View {
 
 struct CircuitView_Previews: PreviewProvider {
     static var previews: some View {
-        CircuitView(model: CircuitModel(name: "Albert Park Circuit",
+        CircuitView(model: CircuitModel(id:1,
+                                        name: "Albert Park Circuit",
                                         imageUrl: "https://media-1.api-sports.io/formula-1/circuits/1.png",
                                         city: "Melbourne",
                                         country: "Australia",

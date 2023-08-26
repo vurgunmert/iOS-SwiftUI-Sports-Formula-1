@@ -27,7 +27,12 @@ struct RacesResponse: Codable {
         errors     = try values.decodeIfPresent([String].self   , forKey: .errors     ) ?? []
         results    = try values.decodeIfPresent(Int.self        , forKey: .results    ) ?? 0
         response   = try values.decodeIfPresent([RacesResponseItem].self , forKey: .response   ) ?? []
-        
+    }
+    
+    init(items: [RacesResponseItem]) {
+        errors = []
+        results = items.count
+        response = items
     }
 }
 
@@ -65,7 +70,7 @@ struct RacesResponseItem: Codable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         id          = try values.decode(Int.self         , forKey: .id          )
         competition = try values.decodeIfPresent(CompetitionDto.self , forKey: .competition )
         circuit     = try values.decodeIfPresent(CircuitDto.self     , forKey: .circuit     )
@@ -78,6 +83,32 @@ struct RacesResponseItem: Codable {
         date        = try values.decodeIfPresent(String.self      , forKey: .date        )
         weather     = try values.decodeIfPresent(String.self      , forKey: .weather     )
         status      = try values.decodeIfPresent(String.self      , forKey: .status      )
+    }
+    
+    init(id: Int,
+         competition: CompetitionDto? = nil,
+         circuit: CircuitDto? = nil,
+         season: Int? = nil,
+         type: String? = nil,
+         laps: LapsDto? = nil,
+         fastestLap: FastestLapDto? = nil,
+         distance: String? = nil,
+         timezone: String? = nil,
+         date: String? = nil,
+         weather: String? = nil,
+         status: String? = nil) {
         
+        self.id = id
+        self.competition = competition
+        self.circuit = circuit
+        self.season = season
+        self.type = type
+        self.laps = laps
+        self.fastestLap = fastestLap
+        self.distance = distance
+        self.timezone = timezone
+        self.date = date
+        self.weather = weather
+        self.status = status
     }
 }

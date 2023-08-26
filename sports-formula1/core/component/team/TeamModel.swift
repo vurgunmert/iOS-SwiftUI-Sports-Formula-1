@@ -14,7 +14,7 @@ struct TeamModel: Identifiable, Equatable {
     let points: Int
     let imageUrl: String?
 
-    init(id: Int = 0, position: Int, name: String, points: Int, imageUrl: String? = nil) {
+    init(id: Int, position: Int, name: String, points: Int, imageUrl: String? = nil) {
         self.id = id
         self.position = position
         self.name = name

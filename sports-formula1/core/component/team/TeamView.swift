@@ -42,7 +42,8 @@ struct TeamView: View {
 
 struct TeamView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamView(model: TeamModel(position: 1,
+        TeamView(model: TeamModel(id: 2,
+                                  position: 1,
                                   name: "Red Bull Racing",
                                   points: 503,
                                   imageUrl: "https://media.api-sports.io/formula-1/teams/1.png"))
