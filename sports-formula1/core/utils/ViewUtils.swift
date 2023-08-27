@@ -24,3 +24,14 @@ extension View {
         clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
 }
+
+///Conditional apply function into view itself
+extension View {
+    @ViewBuilder func `if`<T>(_ condition: Bool, transform: (Self) -> T) -> some View where T : View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}

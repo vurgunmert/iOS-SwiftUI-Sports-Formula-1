@@ -39,10 +39,7 @@ struct HomeScreenView: View {
                         TeamMiniView(model: model)
                     }
                     .swipeActions(edge: .leading) { Button("Swipe") {print("swipe")} } // winds up disabled by edit mode
-                    
-                    
-                    
-                    
+
                 }
                 
             }

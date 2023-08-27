@@ -12,9 +12,10 @@ struct SwiftUI_Formula1App: App {
     
     var body: some Scene {
         WindowGroup {
-            LandingScreenView()
-                .environmentObject(Ranking(client: MockedApiSportsService()))
-                .environmentObject(Catalog(client: MockedApiSportsService()))
+            NewsCarousel()
+//            LandingScreenView()
+//                .environmentObject(Ranking(client: MockedApiSportsService()))
+//                .environmentObject(Catalog(client: MockedApiSportsService()))
         }
     }
 }
