@@ -2,7 +2,7 @@
 //  CarCarouselSnapView.swift
 //  sports-formula1
 //
-//  Created by user on 27.08.2023.
+//  Created by Vurgun on 27.08.2023.
 //
 
 import SwiftUI
@@ -43,7 +43,6 @@ struct CarCarouselTabView: View {
                     .frame(width: size.width - 50)
                 })
             })
-            .frame(height: 200)
             .tabViewStyle(.page(indexDisplayMode: .never))
         }
     }

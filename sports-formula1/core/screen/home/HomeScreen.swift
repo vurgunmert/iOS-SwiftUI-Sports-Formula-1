@@ -16,42 +16,42 @@ struct HomeScreenView: View {
 
         NavigationView {
             
-            List {
-                Section(header: Text("Race Schedule")) {
-                    
-                    ForEach(catalog.races, content: { model in
-                        
-                        NavigationLink {
-                            RaceDetailScreen()
-                        } label: {
-                            RaceSummaryView(model: model)
-                        }
-                    })
-                }
-                
-                Text("Top Teams")
-                    .font(.system(size: 24, weight: .thin))
-                    .padding(.top, 30)
-                
-                ForEach(ranking.teams) { model in
-                    
-                    NavigationLink(destination: TeamDetailScreen()) {
-                        TeamMiniView(model: model)
-                    }
-                    .swipeActions(edge: .leading) { Button("Swipe") {print("swipe")} } // winds up disabled by edit mode
-
-                }
-                
-            }
-            .listStyle(GroupedListStyle())
-            .task {
-                do {
-                    try await catalog.loadRaces()
-                    try await ranking.loadTeams()
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
+//            List {
+//                Section(header: Text("Race Schedule")) {
+//
+//                    ForEach(catalog.races, content: { model in
+//
+//                        NavigationLink {
+//                            RaceDetailScreen()
+//                        } label: {
+//                            RaceSummaryView(model: model)
+//                        }
+//                    })
+//                }
+//
+//                Text("Top Teams")
+//                    .font(.system(size: 24, weight: .thin))
+//                    .padding(.top, 30)
+//
+//                ForEach(ranking.teams) { model in
+//
+//                    NavigationLink(destination: TeamDetailScreen()) {
+//                        TeamMiniView(model: model)
+//                    }
+//                    .swipeActions(edge: .leading) { Button("Swipe") {print("swipe")} } // winds up disabled by edit mode
+//
+//                }
+//
+//            }
+//            .listStyle(GroupedListStyle())
+//            .task {
+//                do {
+//                    try await catalog.loadRaces()
+//                    try await ranking.loadTeams()
+//                } catch {
+//                    print(error.localizedDescription)
+//                }
+//            }
             
         }
 

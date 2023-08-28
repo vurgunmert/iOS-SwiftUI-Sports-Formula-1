@@ -2,43 +2,46 @@
 //  SnapCarouselTest.swift
 //  sports-formula1
 //
-//  Created by user on 27.08.2023.
+//  Created by Vurgun on 27.08.2023.
 //
 
 import SwiftUI
 
 
-struct NewsCarousel: View {
+struct NewsCarousel<T: CarouselItem>: View {
     
-    @State var currentIndex: Int = 0
+    @State var items: [T]
     
-    @State var posts: [Post] = [
-        .init(image: "news1", title: "1st News"),
-        .init(image: "news2", title: "2nd News"),
-        .init(image: "news3", title: "3rd News"),
-        .init(image: "news4", title: "4th News"),
-    ]
+//    @State private var carouselIndex: Int = 0
+    
+    @State private var currentIndex: Int = 0
+        
+    private var onItemSnappedBehavior: ((T) -> ())? = nil
+    private var onItemSelectedBehavior: ((T) -> ())? = nil
+        
+    init(items: [T],
+         onSnapped: ((T) -> ())? = nil,
+         onSelected: ((T) -> ())? = nil) {
+        self.items = items
+        self.onItemSnappedBehavior = onSnapped
+        self.onItemSelectedBehavior = onSelected
+    }
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             
             //Carousel
-            SnapCarousel(index: $currentIndex, items: posts) { post in
-                
-                let index = posts.firstIndex(of: post)
-                
+            SnapCarousel(index: $currentIndex, items: items) { item in
+                let index = items.firstIndex(of: item)
                 GeometryReader { cardGeometry in
                     let size = cardGeometry.size
                     
-                    ZStack(alignment: .topTrailing) {
-                        Image(post.image)
+                    ZStack(alignment: .center) {
+                        Image(item.image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         
-                        Text(post.title)
-                            .font(.system(.headline))
-                            .foregroundColor(.red)
-                            .padding(10)
+                        //any view overlay
                     }.frame(width: size.width)
                         .cornerRadius(10)
                         .if(currentIndex == index) {
@@ -51,10 +54,13 @@ struct NewsCarousel: View {
                 }
             }
             .padding(.top, 20)
+            .onChange(of: currentIndex, perform: { idx in
+                onItemSnappedBehavior?(items[idx])
+            })
             
             //Indicator
             HStack(spacing: 8) {
-                ForEach(posts.indices, id: \.self) { index in
+                ForEach(items.indices, id: \.self) { index in
                     
                     ZStack {
                         Circle()
@@ -70,12 +76,19 @@ struct NewsCarousel: View {
             }
             .padding(.trailing, 50)
             .padding(.bottom, 30)
-        }.frame(height: 230)
+        }
+        .onTapGesture {
+            onItemSelectedBehavior?(items[currentIndex])
+        }
     }
+    
 }
 
 struct SnapCarouselTest_Previews: PreviewProvider {
     static var previews: some View {
-        NewsCarousel()
+        @State var currentIndex: Int = 0
+        
+        NewsCarousel<NewsPost>(items: dummyCarouselNews)
+            .background(.red)
     }
 }

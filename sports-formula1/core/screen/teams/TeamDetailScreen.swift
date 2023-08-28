@@ -2,7 +2,7 @@
 //  TeamDetailScreen.swift
 //  sports-formula1
 //
-//  Created by user on 27.08.2023.
+//  Created by Vurgun on 27.08.2023.
 //
 
 import SwiftUI

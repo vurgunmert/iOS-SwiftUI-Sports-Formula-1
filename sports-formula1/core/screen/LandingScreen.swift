@@ -10,27 +10,24 @@ import SwiftUI
 struct LandingScreenView: View {
     var body: some View {
         TabView {
-            HomeScreenView()
+            NewsScreen()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("News", systemImage: "house")
+                        .tint(.red)
                 }
-            RacesScreenView()
+            NewsScreen()
+                .background(.black)
                 .tabItem {
-                    Label("Races", systemImage: "arrow.up.to.line")
+                    Label("Standings", systemImage: "arrow.up.to.line")
                 }
-            DriversScreenView()
+            NewsScreen()
+                .background(.black)
                 .tabItem {
-                    Label("Drivers", systemImage: "person")
-                }
-            TeamsScreenView()
-                .tabItem {
-                    Label("Teams", systemImage: "folder")
-                }
-            CircuitsScreenView()
-                .tabItem {
-                    Label("Circuits", systemImage: "arrow.2.squarepath")
+                    Label("Races", systemImage: "person")
                 }
         }
+        .accentColor(.red)
+        .colorScheme(.dark)
     }
 }
 
