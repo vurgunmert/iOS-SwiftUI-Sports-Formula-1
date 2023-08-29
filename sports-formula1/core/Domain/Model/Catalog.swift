@@ -199,4 +199,46 @@ class Catalog: ObservableObject  {
             }
         }
     }
+    
+    @Published var canadaResults: [RaceResultCardModel] = .init()
+    
+    func loadRaceResults(raceId: Int = 1711) {
+        if let result = loadCanadaRaceResultsJson() {
+            
+            
+            var raceResults = Array<RaceResultCardModel>()
+            
+            result.response.forEach { item in
+                
+                raceResults.append(.init(position: item.position, time: item.time, driver: item.driver, team: item.team))
+            }
+            
+            DispatchQueue.main.async {
+                self.canadaResults = raceResults
+            }
+        }
+    }
+    
+    private func loadCanadaRaceResultsJson(filename fileName: String = "canadaResult23") -> RaceResultsResponse? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(RaceResultsResponse.self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+}
+
+
+struct RaceResultCardModel: Identifiable {
+    var id: UUID = .init()
+    var position: Int
+    var time: String
+    var driver: DriverDto
+    var team: TeamDto
 }

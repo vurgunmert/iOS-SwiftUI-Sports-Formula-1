@@ -46,6 +46,8 @@
 		CEA8BBCA2A9DF142003C16E9 /* DriverDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBC92A9DF142003C16E9 /* DriverDetailScreen.swift */; };
 		CEA8BBCD2A9DF410003C16E9 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBCC2A9DF410003C16E9 /* Navigator.swift */; };
 		CEA8BBCF2A9DF8EF003C16E9 /* NewsDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBCE2A9DF8EF003C16E9 /* NewsDetailScreen.swift */; };
+		CEA8BBD12A9E0A1D003C16E9 /* canadaResult23.json in Resources */ = {isa = PBXBuildFile; fileRef = CEA8BBD02A9E09E4003C16E9 /* canadaResult23.json */; };
+		CEA8BBD32A9E0A9E003C16E9 /* RaceResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBD22A9E0A9E003C16E9 /* RaceResultsResponse.swift */; };
 		CEAE792F2A9CCC5000A45225 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE792E2A9CCC5000A45225 /* NewsScreen.swift */; };
 		CEAE79312A9CD74A00A45225 /* DetailedNewsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE79302A9CD74A00A45225 /* DetailedNewsCarousel.swift */; };
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
@@ -118,6 +120,8 @@
 		CEA8BBC92A9DF142003C16E9 /* DriverDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailScreen.swift; sourceTree = "<group>"; };
 		CEA8BBCC2A9DF410003C16E9 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		CEA8BBCE2A9DF8EF003C16E9 /* NewsDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailScreen.swift; sourceTree = "<group>"; };
+		CEA8BBD02A9E09E4003C16E9 /* canadaResult23.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = canadaResult23.json; sourceTree = "<group>"; };
+		CEA8BBD22A9E0A9E003C16E9 /* RaceResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultsResponse.swift; sourceTree = "<group>"; };
 		CEAE792E2A9CCC5000A45225 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
 		CEAE79302A9CD74A00A45225 /* DetailedNewsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedNewsCarousel.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 		CEA8BBBF2A9DD734003C16E9 /* rawData */ = {
 			isa = PBXGroup;
 			children = (
+				CEA8BBD02A9E09E4003C16E9 /* canadaResult23.json */,
 				CEA8BBC02A9DD770003C16E9 /* races23.json */,
 			);
 			path = rawData;
@@ -400,6 +405,7 @@
 				CEC824162A989EB900B60966 /* LapsDto.swift */,
 				CEC824182A98ABE300B60966 /* CircuitsResponse.swift */,
 				CEC8241A2A98AC4D00B60966 /* LapRecordDto.swift */,
+				CEA8BBD22A9E0A9E003C16E9 /* RaceResultsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -553,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA8BBD12A9E0A1D003C16E9 /* canadaResult23.json in Resources */,
 				CEC442BF2A9C7DA400835B3F /* race_canada_23.mp4 in Resources */,
 				CECBF63C2A90E02D00B93271 /* Preview Assets.xcassets in Resources */,
 				CEA8BBC12A9DD770003C16E9 /* races23.json in Resources */,
@@ -623,6 +630,7 @@
 				CEA8BBBC2A9D1F25003C16E9 /* DummyTeams.swift in Sources */,
 				CEC8240D2A989BD300B60966 /* TeamRankingsResponse.swift in Sources */,
 				CE423B572A9B542C00FDB026 /* CarCarouselTabView.swift in Sources */,
+				CEA8BBD32A9E0A9E003C16E9 /* RaceResultsResponse.swift in Sources */,
 				CED00D362A9A9FFA00F6055D /* RacesScreen.swift in Sources */,
 				CE423B522A9B460D00FDB026 /* CarCard.swift in Sources */,
 				CE8B0F232A9605E400DF8AC0 /* DriverMiniView.swift in Sources */,
