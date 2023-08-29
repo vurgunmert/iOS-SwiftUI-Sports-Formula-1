@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HorizontalNewsFeed: View {
     
+    @EnvironmentObject var navigator: Navigator
     var title: String
     @State var items: [NewsPost]
     
@@ -45,6 +46,9 @@ struct HorizontalNewsFeed: View {
                         .cornerRadius(20, corners: .bottomRight)
                         .listRowSeparator(.hidden)
                         .offset(x: 15)
+                        .onTapGesture {
+                            navigator.addRoute(.newsDetail(item))
+                        }
                         
                     }
                 }

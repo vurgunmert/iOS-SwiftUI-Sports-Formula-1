@@ -13,7 +13,7 @@ protocol CarouselItem: Identifiable, Equatable {
     var title: String? { get set }
 }
 
-struct NewsPost: CarouselItem {
+struct NewsPost: CarouselItem, Hashable {
     var id: UUID = .init()
     var image: String
     var title: String?

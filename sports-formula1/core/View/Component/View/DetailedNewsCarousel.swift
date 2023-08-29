@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailedNewsCarousel: View {
     
+    @EnvironmentObject private var navigator: Navigator
+    
     private var scrollViewTopViewId: Int = 0
     @State private var posts: [NewsPost]
     @State private var currentPost: NewsPost
@@ -30,7 +32,9 @@ struct DetailedNewsCarousel: View {
                     currentPost = post
                 }, onSelected: { post in
                     //On carousel selected
-                })
+                    navigator.addRoute(.newsDetail(post))
+                    
+                }).frame(maxWidth: .infinity)
                 
                 Text(currentPost.title!)
                     .frame(width: .infinity, height: 80, alignment: .leading)

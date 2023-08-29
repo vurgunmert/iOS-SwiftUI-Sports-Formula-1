@@ -44,6 +44,8 @@
 		CEA8BBC52A9DE82B003C16E9 /* DummyRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBC42A9DE82B003C16E9 /* DummyRaces.swift */; };
 		CEA8BBC72A9DF0BC003C16E9 /* RaceDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBC62A9DF0BC003C16E9 /* RaceDetailScreen.swift */; };
 		CEA8BBCA2A9DF142003C16E9 /* DriverDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBC92A9DF142003C16E9 /* DriverDetailScreen.swift */; };
+		CEA8BBCD2A9DF410003C16E9 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBCC2A9DF410003C16E9 /* Navigator.swift */; };
+		CEA8BBCF2A9DF8EF003C16E9 /* NewsDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BBCE2A9DF8EF003C16E9 /* NewsDetailScreen.swift */; };
 		CEAE792F2A9CCC5000A45225 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE792E2A9CCC5000A45225 /* NewsScreen.swift */; };
 		CEAE79312A9CD74A00A45225 /* DetailedNewsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE79302A9CD74A00A45225 /* DetailedNewsCarousel.swift */; };
 		CEB9ED8B2A92353B008FAC22 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9ED8A2A92353B008FAC22 /* Kingfisher */; };
@@ -114,6 +116,8 @@
 		CEA8BBC42A9DE82B003C16E9 /* DummyRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRaces.swift; sourceTree = "<group>"; };
 		CEA8BBC62A9DF0BC003C16E9 /* RaceDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailScreen.swift; sourceTree = "<group>"; };
 		CEA8BBC92A9DF142003C16E9 /* DriverDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailScreen.swift; sourceTree = "<group>"; };
+		CEA8BBCC2A9DF410003C16E9 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		CEA8BBCE2A9DF8EF003C16E9 /* NewsDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailScreen.swift; sourceTree = "<group>"; };
 		CEAE792E2A9CCC5000A45225 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
 		CEAE79302A9CD74A00A45225 /* DetailedNewsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedNewsCarousel.swift; sourceTree = "<group>"; };
 		CEB9ED8E2A934D1F008FAC22 /* NextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRaceView.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 				CE8B0F352A961D9A00DF8AC0 /* DateUtils.swift */,
 				CE8B0F372A96336900DF8AC0 /* ViewUtils.swift */,
 				CE8B0F392A96338800DF8AC0 /* ColorUtils.swift */,
+				CEA8BBCC2A9DF410003C16E9 /* Navigator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAE792E2A9CCC5000A45225 /* NewsScreen.swift */,
+				CEA8BBCE2A9DF8EF003C16E9 /* NewsDetailScreen.swift */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -626,6 +632,7 @@
 				CE8B0F342A96160200DF8AC0 /* RaceSummaryModel.swift in Sources */,
 				CEC824112A989E7900B60966 /* LocationDto.swift in Sources */,
 				CEA8BBB62A9CF506003C16E9 /* DriverCard.swift in Sources */,
+				CEA8BBCD2A9DF410003C16E9 /* Navigator.swift in Sources */,
 				CEA8BBC52A9DE82B003C16E9 /* DummyRaces.swift in Sources */,
 				CE423B5F2A9B850200FDB026 /* NewsCarousel.swift in Sources */,
 				CE423B552A9B474B00FDB026 /* CarCarouselScrollView.swift in Sources */,
@@ -653,6 +660,7 @@
 				CEA8BBC32A9DDDD6003C16E9 /* RaceCard.swift in Sources */,
 				CECBF6352A90E02B00B93271 /* SwiftUI_Formula1App.swift in Sources */,
 				CEC824152A989EA600B60966 /* CircuitDto.swift in Sources */,
+				CEA8BBCF2A9DF8EF003C16E9 /* NewsDetailScreen.swift in Sources */,
 				CEC824172A989EB900B60966 /* LapsDto.swift in Sources */,
 				CE8B0F2A2A960AB100DF8AC0 /* TeamMiniView.swift in Sources */,
 				CE423B642A9BB20600FDB026 /* ExperimentNewsCarouselBehaviors.swift in Sources */,
