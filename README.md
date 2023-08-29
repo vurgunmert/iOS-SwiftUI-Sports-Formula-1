@@ -3,14 +3,10 @@
 
 ## Features
 
-1. Components
-	- Image
-	- Text
-	- VStack, HStack, ZStack
-	- Tabs
-	- Video Player
+### Pod
+	- Kingfisher
 
-2. Features
+### Features
 	- JSON File Reading
 	- Networking
 	- Carousel
