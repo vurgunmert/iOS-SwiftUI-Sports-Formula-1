@@ -120,4 +120,83 @@ class Catalog: ObservableObject  {
             throw error
         }
     }
+    
+    func loadRacesRaw() {
+        
+        if let result = loadRacesJson() {
+            
+            let raceModels = result.response.map({
+                
+                RaceSummaryModel(
+                    id: $0.id,
+                    name: $0.competition?.name ?? "Unknown",
+                    country: $0.competition?.location?.country ?? "Unknown",
+                    circuitName:  $0.circuit?.name ?? "Unknown",
+                    dateTime: $0.date != nil ? dateFrom(date: $0.date!) : nil,
+                    drivers: [])
+            })
+            
+            DispatchQueue.main.async {
+                self.races = raceModels
+            }
+        }
+    }
+    
+    private func loadRacesJson(filename fileName: String = "races23") -> RacesResponse? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(RacesResponse.self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+    
+    
+    @Published var completedRaces: [RaceCardModel] = .init()
+    @Published var scheduledRaces: [RaceCardModel] = .init()
+    
+    
+    func loadRaceCardsRaw() {
+        if let result = loadRacesJson() {
+            
+            var ongoingRaces = Array<RaceCardModel>()
+            var finishedRaces = Array<RaceCardModel>()
+            
+            
+            result.response.forEach { race in
+                
+                if race.type == "Race" {
+                    
+                    if race.status == "Completed" {
+                        finishedRaces.append(.init(
+                            id: race.id,
+                            dateTime: race.date != nil ? dateFrom(date: race.date!)?.formatted() ?? "N/A1" : "N/A2",
+                            country: race.competition?.location?.country ?? "N/A",
+                            name: race.competition?.name ?? "N/A",
+                            completed: true))
+                    } else {
+                        ongoingRaces.append(.init(
+                            id: race.id,
+                            dateTime: race.date != nil ? dateFrom(date: race.date!)?.formatted() ?? "N/A1" : "N/A2",
+                            country: race.competition?.location?.country ?? "N/A",
+                            name: race.competition?.name ?? "N/A",
+                            completed: false))
+                    }
+                    
+                } else {
+                    // Ignore
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.completedRaces = finishedRaces
+                self.scheduledRaces = ongoingRaces
+            }
+        }
+    }
 }

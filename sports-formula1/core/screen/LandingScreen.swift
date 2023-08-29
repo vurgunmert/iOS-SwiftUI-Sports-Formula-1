@@ -12,18 +12,18 @@ struct LandingScreenView: View {
         TabView {
             NewsScreen()
                 .tabItem {
-                    Label("News", systemImage: "house")
+                    Label("News", systemImage: "doc.richtext")
                         .tint(.red)
                 }
             StandingsScreen()
                 .background(.black)
                 .tabItem {
-                    Label("Standings", systemImage: "arrow.up.to.line")
+                    Label("Standings", systemImage: "tray.and.arrow.up.fill")
                 }
-            NewsScreen()
+            RaceDetailScreen()
                 .background(.black)
                 .tabItem {
-                    Label("Races", systemImage: "person")
+                    Label("Races", systemImage: "flag.fill")
                 }
         }
         .accentColor(.red)
