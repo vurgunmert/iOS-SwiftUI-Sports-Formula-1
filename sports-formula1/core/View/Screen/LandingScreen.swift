@@ -38,8 +38,8 @@ struct LandingScreenView: View {
                 switch(route) {
                     case .newsDetail(let model):
                         NewsDetailScreen(model: model)
-                    case .driverDetail(let model):
-                        DriverDetailScreen(model: model)
+                    case .driverDetail(let driver, let team):
+                        DriverDetailScreen(driver: driver, team: team)
                     case .teamDetail(let model):
                         TeamDetailScreen(model: model)
                     case .raceDetail(let model):

@@ -24,7 +24,7 @@ class Navigator: ObservableObject {
 
 enum ScreenRoute: Hashable {
     case newsDetail(NewsPost)
-    case driverDetail(DriverCardModel)
+    case driverDetail(DriverCardModel, TeamCardModel)
     case teamDetail(TeamCardModel)
     case raceDetail(RaceCardModel)
 }

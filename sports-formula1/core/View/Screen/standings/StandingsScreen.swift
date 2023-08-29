@@ -31,7 +31,12 @@ struct StandingsScreen: View {
                         ForEach(dummyDriverCards) { model in
                             DriverCard(model: model)
                                 .onTapGesture {
-                                    navigator.addRoute(.driverDetail(model))
+                                    
+                                    let team = dummyTeamCards.first(where: { team in
+                                        team.driver1.lastName == model.lastName || team.driver2.lastName == model.lastName
+                                    })!
+                                    
+                                    navigator.addRoute(.driverDetail(model, team))
                                 }
                         }
                     }
@@ -44,7 +49,7 @@ struct StandingsScreen: View {
                         ForEach(dummyTeamCards) { model in
                             TeamCard(model: model)
                                 .padding(.top, 30)
-                                .onTapGesture {
+                                .onTapGesture {dummyTeamCards
                                     navigator.addRoute(.teamDetail(model))
                                 }
                         }

@@ -15,6 +15,8 @@ struct NewsDetailScreen: View {
         
         ScrollView(.vertical) {
             VStack {
+                Text("News Detail Screen")
+                
                 Image(model.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)

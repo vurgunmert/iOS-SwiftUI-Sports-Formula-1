@@ -37,10 +37,11 @@ struct DetailedNewsCarousel: View {
                 }).frame(maxWidth: .infinity)
                 
                 Text(currentPost.title!)
-                    .frame(width: .infinity, height: 80, alignment: .leading)
                     .foregroundColor(.white)
                     .font(.headline)
                     .padding(.horizontal, 20)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxHeight: 80)
             }.frame(width: size.width, height: 320)
         }
     }

@@ -6,25 +6,35 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DriverDetailScreen: View {
     
-    var model: DriverCardModel
+    var driver: DriverCardModel
+    var team: TeamCardModel
     
     var body: some View {
+        
         VStack {
+            Text("Driver Details Screen")
             
-            Text("Driver Detail Screen")
+            KFImage.url(URL(string: driver.imageUrl))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
             
-            Text(model.lastName)
+            Text(driver.lastName)
+            Text(driver.firstName)
             
-            Text(model.imageUrl)
+            
+            KFImage.url(URL(string: team.imageUrl))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
         }
     }
 }
 
 struct DriverDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DriverDetailScreen(model: alonzoCard)
+        DriverDetailScreen(driver: alonzoCard, team: astonCard)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct RaceDetailScreen: View {
     
@@ -13,10 +14,13 @@ struct RaceDetailScreen: View {
     
     var body: some View {
         VStack {
-            
             Text("Race Detail Screen")
+            
+            KFImage.url(URL(string: model.imageUrl))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
             Text(model.name)
-            Text(model.country)
         }
     }
 }
