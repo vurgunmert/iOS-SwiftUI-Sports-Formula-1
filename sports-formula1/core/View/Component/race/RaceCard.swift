@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct RaceCardModel: Identifiable {
+struct RaceCardModel: Identifiable, Hashable {
     var id: Int
     var dateTime: String
     var country: String

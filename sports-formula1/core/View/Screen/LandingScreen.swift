@@ -36,14 +36,14 @@ struct LandingScreenView: View {
             .colorScheme(.dark)
             .navigationDestination(for: ScreenRoute.self, destination: { route in
                 switch(route) {
-                    case .newsDetail(let item):
-                        NewsDetailScreen(model: item)
-                    case .driverDetail:
-                        DriverDetailScreen()
-                    case .teamDetail:
-                        TeamDetailScreen()
-                    case .raceDetail:
-                        RaceDetailScreen()
+                    case .newsDetail(let model):
+                        NewsDetailScreen(model: model)
+                    case .driverDetail(let model):
+                        DriverDetailScreen(model: model)
+                    case .teamDetail(let model):
+                        TeamDetailScreen(model: model)
+                    case .raceDetail(let model):
+                        RaceDetailScreen(model: model)
                 }
             })
         }

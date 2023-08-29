@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 class Navigator: ObservableObject {
     
     @Published var path = [ScreenRoute]()
@@ -23,7 +24,7 @@ class Navigator: ObservableObject {
 
 enum ScreenRoute: Hashable {
     case newsDetail(NewsPost)
-    case driverDetail
-    case teamDetail
-    case raceDetail
+    case driverDetail(DriverCardModel)
+    case teamDetail(TeamCardModel)
+    case raceDetail(RaceCardModel)
 }

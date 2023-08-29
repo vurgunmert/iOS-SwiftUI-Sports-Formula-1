@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct TeamDetailScreen: View {
+    
+    var model: TeamCardModel
+    
     var body: some View {
-        Text("Team Details Screen")
+        VStack {
+            Text("Team Details Screen")
+        
+            Text(model.name)
+            
+            Text(model.imageUrl)
+        }
     }
 }
 
 struct TeamDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TeamDetailScreen()
+        TeamDetailScreen(model: astonCard)
     }
 }

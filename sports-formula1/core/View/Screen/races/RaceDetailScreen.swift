@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct RaceDetailScreen: View {
+    
+    var model: RaceCardModel
+    
     var body: some View {
-        Text("Race Detail Screen")
+        VStack {
+            
+            Text("Race Detail Screen")
+            Text(model.name)
+            Text(model.country)
+        }
     }
 }
 
 struct RaceDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        RaceDetailScreen()
+        RaceDetailScreen(model: canadaRaceCard)
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StandingsScreen: View {
     
-    
+    @EnvironmentObject var navigator: Navigator
     @State private var selectedTab = 0
 
     var body: some View {
@@ -30,6 +30,9 @@ struct StandingsScreen: View {
                     LazyVStack {
                         ForEach(dummyDriverCards) { model in
                             DriverCard(model: model)
+                                .onTapGesture {
+                                    navigator.addRoute(.driverDetail(model))
+                                }
                         }
                     }
                 }.scrollIndicators(.hidden)
@@ -41,6 +44,9 @@ struct StandingsScreen: View {
                         ForEach(dummyTeamCards) { model in
                             TeamCard(model: model)
                                 .padding(.top, 30)
+                                .onTapGesture {
+                                    navigator.addRoute(.teamDetail(model))
+                                }
                         }
                     }
                 }.scrollIndicators(.hidden)

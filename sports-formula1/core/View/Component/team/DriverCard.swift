@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct DriverCardModel: Identifiable {
+struct DriverCardModel: Identifiable, Hashable {
     var id: UUID = .init()
     var firstName: String
     var lastName: String

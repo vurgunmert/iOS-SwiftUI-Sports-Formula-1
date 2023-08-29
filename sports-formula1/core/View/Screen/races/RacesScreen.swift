@@ -10,6 +10,7 @@ import SwiftUI
 struct RacesScreen: View {
     
     @EnvironmentObject var catalog: Catalog
+    @EnvironmentObject var navigator: Navigator
     
     @State private var selectedTab = 0
     
@@ -31,6 +32,9 @@ struct RacesScreen: View {
                     LazyVStack {
                         ForEach(catalog.completedRaces) { model in
                             RaceCard(model: model)
+                                .onTapGesture {
+                                    navigator.addRoute(.raceDetail(model))
+                                }
                         }
                     }
                 }.scrollIndicators(.hidden)
@@ -41,16 +45,16 @@ struct RacesScreen: View {
                     LazyVStack {
                         ForEach(catalog.scheduledRaces) { model in
                             RaceCard(model: model)
+                                .onTapGesture {
+                                    navigator.addRoute(.raceDetail(model))
+                                }
                         }
                     }
                 }.scrollIndicators(.hidden)
             }
         }.padding(10)
             .onAppear{
-                
-                
                 catalog.loadRaceCardsRaw()
-                
             }
     }
 }

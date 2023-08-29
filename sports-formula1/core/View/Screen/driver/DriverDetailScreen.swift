@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct DriverDetailScreen: View {
+    
+    var model: DriverCardModel
+    
     var body: some View {
-        Text("Driver Detail Screen")
+        VStack {
+            
+            Text("Driver Detail Screen")
+            
+            Text(model.lastName)
+            
+            Text(model.imageUrl)
+        }
     }
 }
 
 struct DriverDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DriverDetailScreen()
+        DriverDetailScreen(model: alonzoCard)
     }
 }

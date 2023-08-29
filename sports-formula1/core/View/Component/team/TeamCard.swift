@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct TeamCardModel: Identifiable {
+struct TeamCardModel: Identifiable, Hashable {
     var id: UUID = .init()
     var name: String
     var imageUrl: String
