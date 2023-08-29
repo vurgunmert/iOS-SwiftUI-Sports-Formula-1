@@ -10,12 +10,11 @@
 	- JSON File Reading
 	- Networking
 	- Carousel
-  - Vertical & Horizontal Listing
-  - Tap Behaviors
+  	- Vertical & Horizontal Listing
+  	- Tap Behaviors
 	- Animations
 	- Video Player & Controls
-	- Navigation Stack
-		- NavigationPath
+	- Navigation Stack & Path
 
 
 
