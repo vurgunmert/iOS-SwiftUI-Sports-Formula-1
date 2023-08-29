@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct TeamView: View {
-    
+        
     let model: TeamModel
     
     var body: some View {
@@ -25,9 +25,11 @@ struct TeamView: View {
                     .font(.system(size: 30, weight: .semibold))
                 
                 if let imageUrl = model.imageUrl {
+                    
                     KFImage.url(URL(string: imageUrl))
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                    
                 }
             }
             .frame(width: 250)

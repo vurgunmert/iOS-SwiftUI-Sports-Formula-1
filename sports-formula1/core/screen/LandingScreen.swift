@@ -15,7 +15,7 @@ struct LandingScreenView: View {
                     Label("News", systemImage: "house")
                         .tint(.red)
                 }
-            NewsScreen()
+            StandingsScreen()
                 .background(.black)
                 .tabItem {
                     Label("Standings", systemImage: "arrow.up.to.line")
@@ -36,3 +36,4 @@ struct LandingScreenView_Previews: PreviewProvider {
         LandingScreenView()
     }
 }
+
