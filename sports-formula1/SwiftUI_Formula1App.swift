@@ -13,6 +13,7 @@ struct SwiftUI_Formula1App: App {
     var body: some Scene {
         WindowGroup {
             LandingScreenView()
+                .environmentObject(Navigator())
                 .environmentObject(Ranking(client: MockedApiSportsService()))
                 .environmentObject(Catalog(client: MockedApiSportsService()))
         }
