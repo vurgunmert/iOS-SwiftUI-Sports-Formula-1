@@ -20,7 +20,7 @@ struct LandingScreenView: View {
                 .tabItem {
                     Label("Standings", systemImage: "tray.and.arrow.up.fill")
                 }
-            RaceDetailScreen()
+            RacesScreen()
                 .background(.black)
                 .tabItem {
                     Label("Races", systemImage: "flag.fill")

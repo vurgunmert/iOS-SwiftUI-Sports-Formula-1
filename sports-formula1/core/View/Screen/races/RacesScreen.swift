@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RaceDetailScreen: View {
+struct RacesScreen: View {
     
     @EnvironmentObject var catalog: Catalog
     
@@ -55,8 +55,8 @@ struct RaceDetailScreen: View {
     }
 }
 
-struct RaceDetailScreen_Previews: PreviewProvider {
+struct RacesScreen_Previews: PreviewProvider {
     static var previews: some View {
-        RaceDetailScreen()
+        RacesScreen()
     }
 }

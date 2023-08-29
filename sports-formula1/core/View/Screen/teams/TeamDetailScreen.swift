@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TeamDetailScreen: View {
     var body: some View {
-        Text("TeamDetailScreen")
+        Text("Team Details Screen")
     }
 }
 
